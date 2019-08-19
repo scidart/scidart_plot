@@ -1,8 +1,8 @@
 name: scidart_plot
-description: A starting point for Dart libraries or applications.
-# version: 1.0.0
-# homepage: https://www.example.com
-# author: polotto <angelopolotto@yahoo.com.br>
+description: SciDart Plot is a data visualization library compatible with SciDart. This library is part of SciDart project. The main goal is Generate and save plots in SVG format.
+version: 0.0.1-dev.1
+homepage: https://github.com/scidart/scidart_plot
+author: Ângelo Polotto <angelopolotto@gmail.com>
 
 environment:
   sdk: '>=2.4.0 <3.0.0'

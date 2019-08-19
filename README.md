@@ -1,22 +1,35 @@
-A library for Dart developers.
+# SciDart Plot
+**SciDart Plot** is a data visualization library compatible with **SciDart**. 
+This library is part of [SciDart project](https://github.com/scidart).
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+## Goals
+Generate and save plot in [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+ format.
 
-## Usage
+## Motivation
+Make easy the data visualization for SciDart.
 
-A simple usage example:
+## PUB link
+Link to the Pub repository: https://pub.dev/packages/scidart_plot
 
-```dart
-import 'package:scidart_plot/scidart_plot.dart';
+## Installation
+You can follow instruction in the Pub web site: https://pub.dev/packages/scidart_plot#-installing-tab-
 
-main() {
-  var awesome = new Awesome();
-}
-```
+## SciDart Plot structure
+* svg: SVG basic structures;
+  
+## Examples
 
-## Features and bugs
 
-Please file feature requests and bugs at the [issue tracker][tracker].
+## Todo list
+### Benchmarks
+- [ ] made benchmark on Linux
+- [ ] made benchmark on MacOS
+- [ ] made benchmark on MS Windows
 
-[tracker]: http://example.com/issues/replaceme
+### Code implementations
+- [ ] fundamental svg classes
+- [ ] fundamental plot classes: grid generator, subplot, etc
+- [ ] fundamental io file manipulation
+- [ ] plot line
+- [ ] plot stem
