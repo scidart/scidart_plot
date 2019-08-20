@@ -1,6 +1,6 @@
 import 'package:color/color.dart';
 import 'package:meta/meta.dart';
-import 'package:scidart_plot/src/svg/abstract/svg_widget.dart';
+import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 class Rect implements SvgWidget {
   double x;
@@ -9,27 +9,34 @@ class Rect implements SvgWidget {
   double height;
 
   // override
+  String id;
   Color fill;
-  double strokeWidth;
   Color stroke;
+  double strokeWidth;
+  String strokeDasharray;
   String style;
+  String transform;
 
   Rect({@required this.x,
     @required this.y,
     @required this.width,
     @required this.height,
+    this.id,
     this.fill,
-    this.strokeWidth,
     this.stroke,
-    this.style});
+    this.strokeWidth,
+    this.strokeDasharray,
+    this.style,
+    this.transform});
 
   @override
   String toXML() {
-    var xml =
-        '<rect x="${x}" y="${y}" width="${width}" height="${height}" '
+    var xml = '<rect x="${x}" y="${y}" width="${width}" height="${height}" '
+        'id="${id}" '
         'fill="${fill.toHexColor().toCssString()}" '
         'stroke="${stroke.toHexColor().toCssString()}" '
         'stroke-width="${strokeWidth}" '
+        'stroke-dasharray=${strokeDasharray} '
         'style="${style}" />';
     return xml;
   }

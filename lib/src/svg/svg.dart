@@ -1,6 +1,5 @@
 import 'package:meta/meta.dart';
-
-import 'abstract/svg_widget.dart';
+import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 class Svg {
   List<SvgWidget> children;
@@ -14,7 +13,8 @@ class Svg {
   @override
   String toXML() {
     var xml =
-        '''<?xml version="1.0" encoding="UTF-8" ?>\n<svg width="${width}" height="${height}" xmlns="${_xmlns}"> xmlns:xlink="${_xmlnsXlink}"\n''';
+        '<?xml version="1.0" encoding="UTF-8" ?>'
+        '<svg width="${width}" height="${height}" xmlns="${_xmlns}"> xmlns:xlink="${_xmlnsXlink}"\n';
     for (var c in children) {
       xml += '\t' + c.toXML() + '\n';
     }
