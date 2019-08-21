@@ -3,6 +3,7 @@ import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/svg/primitives/point_pair.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
+/// Generate a Polyline
 class Polyline implements SvgWidget {
   List<PointPair> points;
 
@@ -14,7 +15,18 @@ class Polyline implements SvgWidget {
   String strokeDasharray;
   String style;
   String transform;
+  String unit;
 
+  /// Polyline constructor
+  /// [points] A list of points that will be drawn a polyline in the SVG
+  /// [id] widget id to made some reference in the SVG file
+  /// [fill] fill color
+  /// [stroke] stroke line color
+  /// [strokeWidth] stroke line width
+  /// [strokeDasharray] stroke line dash style
+  /// [style] custom css style
+  /// [transform] custom css transformation
+  /// [unit] unit used in the parameters, default is px (pixel)
   Polyline(
       {@required this.points,
         this.id,
@@ -23,7 +35,8 @@ class Polyline implements SvgWidget {
       this.strokeWidth,
         this.strokeDasharray,
         this.style,
-        this.transform});
+        this.transform,
+        this.unit = 'px'});
 
   @override
   String toXML() {
@@ -31,12 +44,12 @@ class Polyline implements SvgWidget {
     points.forEach((p) => pointsXML += p.toXML() + ' ');
 
     var xml = '<polyline points="${pointsXML}" '
-        'id="${id}" '
-        'fill="${fill.toHexColor().toCssString()}" '
-        'stroke="${stroke.toHexColor().toCssString()}" '
-        'stroke-width="${strokeWidth}" '
-        'stroke-dasharray=${strokeDasharray} '
-        'style="${style}" />';
+        'id="${id ?? "none"}" '
+        'fill="${fill?.toHexColor()?.toCssString() ?? "none"}" '
+        'stroke="${stroke?.toHexColor()?.toCssString() ?? "none"}" '
+        'stroke-width="${strokeWidth ?? "none"}" '
+        'stroke-dasharray="${strokeDasharray ?? "none"}" '
+        'style="${style ?? "none"}" />';
     return xml;
   }
 

@@ -1,5 +1,7 @@
 library scidart_plot;
 
+export 'package:color/color.dart';
+
 export 'src/svg/svg.dart';
 export 'src/svg/widgets/circle.dart';
 export 'src/svg/widgets/ellipse.dart';
