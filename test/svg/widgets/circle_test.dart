@@ -6,7 +6,7 @@ void main() {
 
   group('svg', () {
     test('Create a circle', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Circle(cx: 10, cy: 10, r: 10, stroke: Color.hex('000000'))
       ]);
 
@@ -14,7 +14,7 @@ void main() {
     });
 
     test('Create a circle complex', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Circle(
             cx: 10,
             cy: 10,
@@ -26,6 +26,22 @@ void main() {
       ]);
 
       await svg.save(directory + 'circleComplexSvg');
+    });
+
+    test('Create a invisible circle complex', () async {
+      var svg = SvgCanvas(height: 100, width: 100, children: [
+        Circle(
+            cx: 10,
+            cy: 10,
+            r: 10,
+            fill: RgbColor(14, 200, 34),
+            stroke: Color.hex('000000'),
+            strokeWidth: 1,
+            strokeDasharray: '1% 1%',
+            visibility: Visibility.hidden)
+      ]);
+
+      await svg.save(directory + 'circleComplexInvisibleSvg');
     });
   });
 }

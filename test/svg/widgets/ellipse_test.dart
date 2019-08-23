@@ -6,7 +6,7 @@ void main() {
 
   group('svg', () {
     test('Create a Ellipse', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Ellipse(cx: 10, cy: 10, rx: 10, ry: 5, stroke: Color.hex('000000'))
       ]);
 
@@ -14,7 +14,7 @@ void main() {
     });
 
     test('Create a Ellipse', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Ellipse(
             cx: 10,
             cy: 10,

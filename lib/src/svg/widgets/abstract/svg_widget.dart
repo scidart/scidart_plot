@@ -1,4 +1,5 @@
 import 'package:color/color.dart';
+import 'package:scidart_plot/src/svg/primitives/visibility.dart';
 
 // References
 // https://www.w3schools.com/graphics/svg_intro.asp
@@ -17,6 +18,7 @@ abstract class SvgWidget {
   String strokeDasharray;
   String style;
   String transform;
+  Visibility visibility;
   String unit;
 
   // methods

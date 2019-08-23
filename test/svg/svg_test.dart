@@ -6,7 +6,7 @@ void main() {
   const directory = './test_files/';
   group('svg', () {
     test('Create a simple svg', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Circle(cx: 10, cy: 10, r: 5, stroke: RgbColor.name('chocolate')),
         Text(x: 5,
             y: 30,

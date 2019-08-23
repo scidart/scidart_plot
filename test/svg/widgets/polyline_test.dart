@@ -7,7 +7,7 @@ void main() {
 
   group('svg', () {
     test('Create a Polyline', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Polyline(
           points: [
             PointPair(x: 0, y: 0),
@@ -23,7 +23,7 @@ void main() {
     });
 
     test('Create a Polyline', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Polyline(
             points: [
               PointPair(x: 0, y: 0),

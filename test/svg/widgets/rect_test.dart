@@ -6,7 +6,7 @@ void main() {
 
   group('svg', () {
     test('Create a Rect', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Rect(x: 10, y: 10, width: 10, height: 10, stroke: Color.hex('000000'))
       ]);
 
@@ -14,7 +14,7 @@ void main() {
     });
 
     test('Create a Rect complex', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Rect(
             x: 10,
             y: 10,

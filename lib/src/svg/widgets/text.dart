@@ -1,6 +1,10 @@
 import 'package:color/color.dart';
 import 'package:meta/meta.dart';
+import 'package:scidart_plot/src/svg/primitives/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
+
+import 'abstract/attributes.dart';
+import 'abstract/unit_converter.dart';
 
 /// Generate a text element
 class Text implements SvgWidget {
@@ -18,6 +22,7 @@ class Text implements SvgWidget {
   String strokeDasharray;
   String style;
   String transform;
+  Visibility visibility;
 
   /// Text constructor
   /// [x] left top x coordinate of the text
@@ -31,6 +36,7 @@ class Text implements SvgWidget {
   /// [style] custom css style
   /// [transform] custom css transformation
   /// [unit] unit used in the parameters, default is px (pixel)
+  /// [visibility] visibility of the element, default is inherit
   Text(
       {@required this.x,
       @required this.y,
@@ -43,19 +49,24 @@ class Text implements SvgWidget {
       this.strokeDasharray,
       this.style,
         this.transform,
-        this.unit = 'px'});
+        this.unit = 'px',
+        this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    var xml = '<text x="${x}" y="${y}" '
-        'id="${id ?? "none"}" '
-        'fill="${fill?.toHexColor()?.toCssString() ?? "none"}" '
-        'stroke="${stroke?.toHexColor()?.toCssString() ?? "none"}" '
-        'stroke-width="${strokeWidth ?? "none"}" '
-        'style="${style ?? "none"}" '
-        'stroke-dasharray="${strokeDasharray ?? "none"}" '
-        'transform="${transform == null ? '' : transform +
-        ';'} rotate(${rotate ?? "0"} ${x},${y})">${text}</text>';
+    var xml = '<text x="${x}${unitConv(unit)}" y="${y}${unitConv(unit)}" '
+        '${attributes(
+        id,
+        fill,
+        stroke,
+        strokeWidth,
+        strokeDasharray,
+        style,
+        transform,
+        unit,
+        visibility)} >'
+        '${text}'
+        '</text>';
     return xml;
   }
 

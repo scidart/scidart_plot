@@ -6,7 +6,7 @@ void main() {
 
   group('svg', () {
     test('Create a Text', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Text(x: 10, y: 10, text: 'lorem ipsum', stroke: Color.hex('000000'))
       ]);
 
@@ -14,7 +14,7 @@ void main() {
     });
 
     test('Create a Text complex', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Text(
             x: 10,
             y: 10,

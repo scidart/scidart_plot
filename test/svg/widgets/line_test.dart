@@ -6,7 +6,7 @@ void main() {
 
   group('svg', () {
     test('Create a Line', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Line(
           x1: 0,
           y1: 0,
@@ -20,7 +20,7 @@ void main() {
     });
 
     test('Create a Line', () async {
-      var svg = Svg(height: 100, width: 100, children: [
+      var svg = SvgCanvas(height: 100, width: 100, children: [
         Line(
             x1: 0,
             y1: 0,
