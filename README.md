@@ -1,6 +1,6 @@
 # SciDart Plot
 **SciDart Plot** is a data visualization library compatible with **SciDart**. 
-This library is part of [SciDart project](https://github.com/scidart).
+This library is part of [SciDart project](https://scidart.org).
 
 ## Goals
 Generate and save plot in [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
@@ -19,7 +19,7 @@ You can follow instruction in the Pub web site: https://pub.dev/packages/scidart
 * svg: SVG basic structures;
   
 ## Examples
-
+TODO
 
 ## Todo list
 ### Benchmarks
@@ -28,7 +28,7 @@ You can follow instruction in the Pub web site: https://pub.dev/packages/scidart
 - [ ] made benchmark on MS Windows
 
 ### Code implementations
-- [ ] fundamental svg classes
+- [x] fundamental svg classes
 - [ ] fundamental plot classes: grid generator, subplot, etc
 - [ ] fundamental io file manipulation
 - [ ] plot line

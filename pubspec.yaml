@@ -8,7 +8,7 @@ environment:
   sdk: '>=2.4.0 <3.0.0'
 
 dependencies:
-#  path: ^1.6.4
+  meta: ^1.1.7
   scidart: ^0.0.1-dev.5
   scidart_io: ^0.0.1-dev.3
   color: ^2.1.1
