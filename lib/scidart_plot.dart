@@ -1,8 +1,5 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
 library scidart_plot;
 
-export 'src/scidart_plot_base.dart';
+export 'package:color/color.dart';
 
-// TODO: Export any libraries intended for clients of this package.
+export './src/svg/svg.dart';
