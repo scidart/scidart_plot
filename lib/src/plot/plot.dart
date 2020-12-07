@@ -1,21 +1,59 @@
+import 'package:scidart/src/numdart/arrays_base/array.dart';
 import 'package:scidart_plot/src/svg/canvas/svg_canvas.dart';
+import 'package:scidart/numdart.dart';
 
+import '../../scidart_plot.dart';
 import 'grid.dart';
 
-SvgCanvas plot(x, y) {
-  var plotWidth = 404.0;
-  var plotHeight = 278.0;
+double convertToPixel(double frameLenght, double arrayDiff, double arrayPoint) {
+  return ((arrayPoint * frameLenght) / arrayDiff);
+}
+
+SvgCanvas plot(plotWidth, plotHeight, Array ax, Array ay) {
+  var frameMarginLeft = 40.0;
+  var frameMarginTop = 10.0;
+  var frameMarginRight = 10.0;
+  var frameMarginButton = 20.0;
+  var frameWidth = plotWidth - frameMarginRight - frameMarginLeft;
+  var frameHeight = plotHeight - frameMarginButton - frameMarginTop;
+
+  var axMin = arrayMin(ax);
+  var axMax = arrayMax(ax);
+  var ayMin = arrayMin(ay);
+  var ayMax = arrayMax(ay);
+  var axArrayDiff = axMax - axMin;
+  var ayArrayDiff = ayMax - ayMin;
+
+  var frameCenterHeight = frameHeight / 2 + frameMarginTop;
 
   var plotGrid = grid(mainWidth: plotWidth,
       mainHeight: plotHeight,
-      minX: 0,
-      maxX: 10,
-      minY: 0,
-      maxY: 10);
+      minX: axMin,
+      maxX: axMax,
+      minY: ayMin,
+      maxY: ayMax,
+      frameMarginLeft: frameMarginLeft,
+      frameMarginTop: frameMarginTop,
+      frameMarginRight: frameMarginRight,
+      frameMarginButton: frameMarginButton,
+  );
+
+  var points = <PointPair>[];
+  for (var i = 0; i < ax.length; i++) {
+    var x = frameMarginLeft + convertToPixel(frameWidth, axArrayDiff, ax[i]);
+    var y = frameCenterHeight - convertToPixel(frameHeight, ayArrayDiff, ay[i]);
+    var point = PointPair(x: x, y: y);
+    points.add(point);
+  }
+
+  var plotLine = Polyline(points: points, stroke: Color.hex('#8ED1EC'));
+
   var plot = SvgCanvas(
       width: plotWidth, height: plotHeight,
       children: [
-        plotGrid
+        plotGrid,
+        plotLine
       ]);
+
   return plot;
 }

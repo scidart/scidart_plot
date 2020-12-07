@@ -46,7 +46,7 @@ class Polyline implements SvgWidget {
 
   @override
   String toXML() {
-    String pointsXML = '';
+    var pointsXML = '';
     points.forEach((p) => pointsXML += p.toXML() + ' ');
 
     var xml = '<polyline points="${pointsXML}" '

@@ -10,14 +10,14 @@ SvgWidget grid({@required double mainWidth,
   @required double maxX,
   @required double minY,
   @required double maxY,
-  id = "grid"}) {
+  @required double frameMarginLeft,
+  @required double frameMarginTop,
+  @required double frameMarginRight,
+  @required double frameMarginButton,
+  id = 'grid'}) {
   var frameStrokeColor = Color.rgb(10, 10, 10);
   var frameFillColor = Color.rgb(255, 255, 255);
   var frameStrokeWidth = 0.5;
-  var frameMarginLeft = 40.0;
-  var frameMarginTop = 10.0;
-  var frameMarginRight = 10.0;
-  var frameMarginButton = 20.0;
 
   var gridMarginLeft = 5.0;
   var gridMarginTop = 5.0;
@@ -70,7 +70,7 @@ SvgWidget grid({@required double mainWidth,
           .floor();
 
   // generate frame
-  List<SvgWidget> widgets = [
+  var widgets = <SvgWidget>[
     Rect(
         x: frameXStart,
         y: frameYStart,
