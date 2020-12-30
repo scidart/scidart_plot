@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg width="100.0" height="100.0" xmlns="http://www.w3.org/2000/svg">
-	<rect x="10.0px" y="10.0px" width="10.0px" height="10.0px" id="none" fill="none" stroke="#000000"
-		  stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit"/>
+	<rect x="10.0px" y="10.0px" width="10.0px" height="10.0px" id="none" fill="none" stroke="#000000" stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit" />
 </svg>

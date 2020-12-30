@@ -9,7 +9,7 @@ class SvgCanvas {
   double height;
 
   // private attributes
-  String _xmlns = "http://www.w3.org/2000/svg";
+  final String _xmlns = 'http://www.w3.org/2000/svg';
 
   //  String _xmlnsXlink = "http://www.w3.org/1999/xlink";
   // xmlns:xlink="${_xmlnsXlink}"

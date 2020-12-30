@@ -13,14 +13,23 @@ class Circle implements SvgWidget {
   double r;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
+  @override
   double strokeWidth;
+  @override
   String strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
+  // ignore: annotate_overrides
   String unit;
+  @override
   Visibility visibility;
 
   /// Circle constructor

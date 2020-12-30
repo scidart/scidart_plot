@@ -11,14 +11,23 @@ class Polygon implements SvgWidget {
   List<PointPair> points;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
+  @override
   double strokeWidth;
+  @override
   String strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
+  @override
   String unit;
+  @override
   Visibility visibility;
 
   /// Polygon constructor
@@ -46,7 +55,7 @@ class Polygon implements SvgWidget {
 
   @override
   String toXML() {
-    String pointsXML = '';
+    var pointsXML = '';
     points.forEach((p) => pointsXML += p.toXML() + ' ');
 
     var xml = '<polygon points="${pointsXML}" '

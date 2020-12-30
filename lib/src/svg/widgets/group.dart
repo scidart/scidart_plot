@@ -10,14 +10,23 @@ class Group implements SvgWidget {
   List<SvgWidget> children;
 
   // override
+  @override
   Color fill;
+  @override
   String id;
+  @override
   Color stroke;
+  @override
   String strokeDasharray;
+  @override
   double strokeWidth;
+  @override
   String style;
+  @override
   String transform;
+  @override
   String unit;
+  @override
   Visibility visibility;
 
   /// Group constructor

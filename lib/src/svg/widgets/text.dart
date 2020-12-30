@@ -12,16 +12,25 @@ class Text implements SvgWidget {
   double y;
   String text;
   double rotate;
-  String unit;
 
   //override
+  @override
+  String unit;
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
+  @override
   double strokeWidth;
+  @override
   String strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
+  @override
   Visibility visibility;
 
   /// Text constructor

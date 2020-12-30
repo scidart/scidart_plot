@@ -14,14 +14,23 @@ class Ellipse implements SvgWidget {
   double ry;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
+  @override
   double strokeWidth;
+  @override
   String strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
+  @override
   String unit;
+  @override
   Visibility visibility;
 
   /// Ellipse constructor

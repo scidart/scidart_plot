@@ -14,16 +14,25 @@ class Line implements SvgWidget {
   double y2;
 
   // override
+  @override
   String id;
+  @override
   Color stroke;
+  @override
   double strokeWidth;
+  @override
   String strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
+  @override
   String unit;
+  @override
   Visibility visibility;
 
   // not used
+  @override
   Color fill;
 
   /// Line constructor

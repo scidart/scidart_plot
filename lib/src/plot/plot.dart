@@ -36,6 +36,8 @@ SvgCanvas plot(plotWidth, plotHeight, Array ax, Array ay) {
       frameMarginTop: frameMarginTop,
       frameMarginRight: frameMarginRight,
       frameMarginButton: frameMarginButton,
+      frameStrokeColor: Color.rgb(10, 10, 10),
+      frameFillColor: Color.rgb(255, 255, 255),
   );
 
   var points = <PointPair>[];

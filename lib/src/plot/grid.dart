@@ -14,9 +14,9 @@ SvgWidget grid({@required double mainWidth,
   @required double frameMarginTop,
   @required double frameMarginRight,
   @required double frameMarginButton,
+  @required frameStrokeColor,
+  @required frameFillColor,
   id = 'grid'}) {
-  var frameStrokeColor = Color.rgb(10, 10, 10);
-  var frameFillColor = Color.rgb(255, 255, 255);
   var frameStrokeWidth = 0.5;
 
   var gridMarginLeft = 5.0;
@@ -83,9 +83,7 @@ SvgWidget grid({@required double mainWidth,
 
   var scaleXText = scaleXStart;
   // generate the vertical lines
-  for (var i = gridVerticalXStart;
-  i <= gridVerticalXEnd;
-  i += gridVerticalXInterval) {
+  for (var i = gridVerticalXStart; i <= gridVerticalXEnd; i += gridVerticalXInterval) {
     widgets.add(Line(
         x1: i,
         y1: gridVerticalYStartConstant,
@@ -112,9 +110,7 @@ SvgWidget grid({@required double mainWidth,
 
   var scaleYText = scaleYEnd;
   // generate the horizontal lines
-  for (var i = gridHorizontalYStart;
-  i <= gridHorizontalYEnd;
-  i += gridHorizontalYInterval) {
+  for (var i = gridHorizontalYStart; i <= gridHorizontalYEnd; i += gridHorizontalYInterval) {
     widgets.add(Line(
         x1: gridHorizontalXStartConstant,
         y1: i,

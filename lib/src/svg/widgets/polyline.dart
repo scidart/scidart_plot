@@ -11,14 +11,23 @@ class Polyline implements SvgWidget {
   List<PointPair> points;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
+  @override
   double strokeWidth;
+  @override
   String strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
+  @override
   String unit;
+  @override
   Visibility visibility;
 
   /// Polyline constructor

@@ -27,5 +27,6 @@ abstract class SvgWidget {
   String toXML();
 
   /// To string converter
+  @override
   String toString();
 }
