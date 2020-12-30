@@ -4,136 +4,191 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import '../../scidart_plot.dart';
 
-SvgWidget grid({@required double mainWidth,
-  @required double mainHeight,
-  @required double minX,
-  @required double maxX,
-  @required double minY,
-  @required double maxY,
+SvgWidget grid({@required double width,
+  @required double height,
+  @required Array ax,
+  @required Array ay,
   @required double frameMarginLeft,
   @required double frameMarginTop,
   @required double frameMarginRight,
   @required double frameMarginButton,
-  @required frameStrokeColor,
-  @required frameFillColor,
+  @required frameGridStrokeColor,
+  @required frameGridDasharray,
+  @required frameAxisStrokeColor,
+  @required grid,
   id = 'grid'}) {
-  var frameStrokeWidth = 0.5;
 
-  var gridMarginLeft = 5.0;
-  var gridMarginTop = 5.0;
-  var gridMarginRight = 5.0;
-  var gridMarginButton = 5.0;
-  var gridVerticalStrokeColor = Color.rgb(191, 191, 191);
-  var gridHorizontalStrokeColor = Color.rgb(191, 191, 191);
-  var gridVerticalScaleLineSize = 5;
-  var gridHorizontalScaleLineSize = 5;
+  // calculate the margin limits
+  final xStart = frameMarginLeft;
+  final xEnd = width - frameMarginRight;
+  final yStart = frameMarginTop;
+  final yEnd = height - frameMarginButton;
 
-  // frame parameters
-  var frameWidth = mainWidth - frameMarginRight - frameMarginLeft;
-  var frameHeight = mainHeight - frameMarginButton - frameMarginTop;
-  var frameXStart = frameMarginLeft;
-  var frameXEnd = frameXStart + frameWidth;
-  var frameYStart = frameMarginTop;
-  var frameYEnd = frameYStart + frameHeight;
+  // calculate X axis distribution
+  final lengthX = xEnd - xStart;
+  final distDeltaX = lengthX / ax.length;
 
-  // vertical lines
-  var gridVerticalXStart = frameXStart + gridMarginLeft;
-  var gridVerticalXEnd = frameXEnd - gridMarginRight;
-  var gridVerticalYStartConstant = frameYStart;
-  var gridVerticalYEndConstant = frameYEnd;
+  // calculate Y axis distribution
+  final lengthY = yEnd - yStart;
+  final distDeltaY = lengthY / ay.length;
 
-  // horizontal lines
-  var gridHorizontalXStartConstant = frameXStart;
-  var gridHorizontalXEndConstant = frameXEnd;
-  var gridHorizontalYStart = frameYStart + gridMarginTop;
-  var gridHorizontalYEnd = frameYEnd - gridMarginButton;
+  // main widgets list
+  var widgets = <SvgWidget>[];
 
-  // x scale (vertical lines)
-  var scaleXStart = minX;
-  var scaleXTotal = (maxX - minX) / 0.001;
+  // draw X axis
+  widgets.add(Line(
+      x1: xStart,
+      y1: yEnd,
+      x2: xEnd,
+      y2: yEnd,
+      stroke: frameAxisStrokeColor));
 
-  // y scale (horizontal lines)
-  var scaleYEnd = maxY;
-  var scaleYTotal = (maxY - minY) / 0.002;
+  // draw Y axis
+  widgets.add(Line(
+      x1: xStart,
+      y1: yStart,
+      x2: xStart,
+      y2: yEnd,
+      stroke: frameAxisStrokeColor));
 
-  // lines intervals
-  var gridVerticalXInterval = scaleXTotal /
-      (gridVerticalXEnd - gridVerticalXStart);
-  var gridHorizontalYInterval = scaleYTotal /
-      (gridHorizontalYEnd - gridHorizontalYStart);
-
-  // scale intervals
-  var scaleXInterval = (maxX - minX) /
-      ((gridVerticalXEnd - gridVerticalXStart) / gridVerticalXInterval).floor();
-  var scaleYInterval = (maxY - minY) /
-      ((gridHorizontalYEnd - gridHorizontalYStart) / gridHorizontalYInterval)
-          .floor();
-
-  // generate frame
-  var widgets = <SvgWidget>[
-    Rect(
-        x: frameXStart,
-        y: frameYStart,
-        width: frameWidth,
-        height: frameHeight,
-        fill: frameFillColor,
-        stroke: frameStrokeColor,
-        strokeWidth: frameStrokeWidth)
-  ];
-
-  var scaleXText = scaleXStart;
-  // generate the vertical lines
-  for (var i = gridVerticalXStart; i <= gridVerticalXEnd; i += gridVerticalXInterval) {
+  // draw X axis marx
+  for(var i = 0; i < ax.length; i++) {
+    var xPoint = _calcXPoint(xStart, i, distDeltaX);
     widgets.add(Line(
-        x1: i,
-        y1: gridVerticalYStartConstant,
-        x2: i,
-        y2: gridVerticalYEndConstant,
-        stroke: gridVerticalStrokeColor));
-
-    // create small line above vertical lines
-    widgets.add(Line(
-        x1: i,
-        y1: gridVerticalYEndConstant,
-        x2: i,
-        y2: gridVerticalYEndConstant + gridVerticalScaleLineSize,
-        stroke: frameStrokeColor));
-
-    // generate x scale (vertical lines)
-    widgets.add(Text(
-        x: i - 8,
-        y: gridVerticalYEndConstant + 3 * gridVerticalScaleLineSize,
-        text: truncate(scaleXText, 1).toString(),
-        fill: frameStrokeColor));
-    scaleXText += scaleXInterval;
+        x1:  xPoint,
+        y1: yEnd,
+        x2: xPoint,
+        y2: yEnd + 10,
+        stroke: frameAxisStrokeColor
+    ));
   }
 
-  var scaleYText = scaleYEnd;
-  // generate the horizontal lines
-  for (var i = gridHorizontalYStart; i <= gridHorizontalYEnd; i += gridHorizontalYInterval) {
+  // draw Y axis mark
+  for(var i = 0; i < ay.length; i++) {
+    var yPoint = _calcYPoint(yEnd, i, distDeltaY);
     widgets.add(Line(
-        x1: gridHorizontalXStartConstant,
-        y1: i,
-        x2: gridHorizontalXEndConstant,
-        y2: i,
-        stroke: gridHorizontalStrokeColor));
+        x1:  xStart,
+        y1: yPoint,
+        x2: xStart - 10,
+        y2: yPoint,
+        stroke: frameAxisStrokeColor
+    ));
+  }
 
-    // create small line left of horizontal lines
-    widgets.add(Line(
-        x1: gridHorizontalXStartConstant - gridHorizontalScaleLineSize,
-        y1: i,
-        x2: gridHorizontalXStartConstant,
-        y2: i,
-        stroke: frameStrokeColor));
+  // draw X axis numbers
+  if(distDeltaX < 10.0) {
+    // if delta is too small, only draw the texts in even position to optimize the space
+    for(var i = 0; i < ax.length; i++) {
+      if (i.isEven) {
+        var xPoint = _calcXPoint(xStart, i, distDeltaX);
+        widgets.add(Text(x: xPoint,
+            y: yEnd + 10,
+            text: truncate(ax[i], 4).toString().toString(),
+            fill: frameAxisStrokeColor));
+      }
+    }
+  } else {
+    for(var i = 0; i < ax.length; i++) {
+      var xPoint = _calcXPoint(xStart, i, distDeltaX);
+      widgets.add(Text(x: xPoint,
+          y: yEnd + 10,
+          text: truncate(ax[i], 4).toString().toString(),
+          fill: frameAxisStrokeColor));
+    }
+  }
+    
+  // draw Y axis numbers
+  if(distDeltaY < 10.0) {
+    // if delta is too small, only draw the texts in even position to optimize the space
+    for(var i = 0; i < ay.length; i++) {
+      if (i.isEven) {
+        var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+        widgets.add(Text(x: xStart,
+            y: yPoint,
+            text: truncate(ay[i], 4).toString().toString(),
+            fill: frameAxisStrokeColor));
+      }
+    }
+  } else {
+    for(var i = 0; i < ay.length; i++) {
+      var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+      widgets.add(Text(x: 0,
+          y: yPoint,
+          text: truncate(ay[i], 4).toString().toString(),
+          fill: frameAxisStrokeColor));
+    }
+  }
 
-    // generate y scale (horizontal lines)
-    widgets.add(Text(
-        x: gridHorizontalXStartConstant - 6 * gridHorizontalScaleLineSize,
-        y: i + 4,
-        text: truncate(scaleYText, 1).toString(),
-        fill: frameStrokeColor));
-    scaleYText -= scaleYInterval;
+  if (grid) {
+    // the insertion always start with 1 to don't overlap the axis
+    // draw X grid lines
+    if(distDeltaX < 10.0) {
+      // if delta is too small, only draw the texts in even position to optimize the space
+      for (var i = 1; i < ax.length; i++) {
+        if (i.isEven) {
+          var xPoint = _calcXPoint(xStart, i, distDeltaX);
+          widgets.add(Line(
+              x1: xPoint,
+              y1: yStart,
+              x2: xPoint,
+              y2: yEnd,
+              stroke: frameGridStrokeColor,
+              strokeDasharray: frameGridDasharray
+          ));
+        }
+      }
+    } else {
+      for (var i = 1; i < ax.length; i++) {
+        var xPoint = _calcXPoint(xStart, i, distDeltaX);
+        widgets.add(Line(
+            x1: xPoint,
+            y1: yStart,
+            x2: xPoint,
+            y2: yEnd,
+            stroke: frameGridStrokeColor,
+            strokeDasharray: frameGridDasharray
+        ));
+      }
+    }
+
+    // draw Y grid lines
+    if(distDeltaY < 10.0) {
+      // if delta is too small, only draw the texts in even position to optimize the space
+      for (var i = 1; i < ay.length; i++) {
+        if (i.isEven) {
+          var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+          widgets.add(Line(
+              x1: xStart,
+              y1: yPoint,
+              x2: xEnd,
+              y2: yPoint,
+              stroke: frameGridStrokeColor,
+              strokeDasharray: frameGridDasharray
+          ));
+        }
+      }
+    } else {
+      for (var i = 1; i < ay.length; i++) {
+        var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+        widgets.add(Line(
+            x1: xStart,
+            y1: yPoint,
+            x2: xEnd,
+            y2: yPoint,
+            stroke: frameGridStrokeColor,
+            strokeDasharray: frameGridDasharray
+        ));
+      }
+    }
   }
 
   return Group(id: id, children: widgets);
+}
+
+double _calcXPoint(double xStart, int i, double distDeltaX) {
+  return xStart + (i * distDeltaX);
+}
+
+double _calcYPoint(double yEnd, int i, double distDeltaY) {
+  return yEnd - (i * distDeltaY);
 }
