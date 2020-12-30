@@ -19,7 +19,7 @@ void main() {
       //https://css-tricks.com/how-to-make-charts-with-svg/
       //https://google.github.io/charts/flutter/example/line_charts/simple
 
-      var plotExample = plot(404.0, 278.0, n, sg);
+      var plotExample = plot(ax: n, ay: sg);
 
       await plotExample.save(directory + 'plotSimple');
     });

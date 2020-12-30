@@ -15,10 +15,10 @@ SvgCanvas plot({@required Array ax,
   var frameMarginTop = 10.0;
   var frameMarginRight = 10.0;
   var frameMarginButton = 20.0;
-  var frameWidth = plotWidth - frameMarginRight - frameMarginLeft;
-  var frameHeight = plotHeight - frameMarginButton - frameMarginTop;
-
-  var frameCenterHeight = frameHeight / 2 + frameMarginTop;
+  
+  //var frameWidth = plotWidth - frameMarginRight - frameMarginLeft;
+  //var frameHeight = plotHeight - frameMarginButton - frameMarginTop;
+  //var frameCenterHeight = frameHeight / 2 + frameMarginTop;
 
   var plotGrid = grid(width: plotWidth,
       height: plotHeight,
