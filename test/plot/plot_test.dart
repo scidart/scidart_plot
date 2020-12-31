@@ -1,4 +1,5 @@
 import 'package:scidart/numdart.dart';
+import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/plot/plot.dart';
 import 'package:scidart_plot/src/plot/plot_line.dart';
 import 'package:test/test.dart';
@@ -46,6 +47,50 @@ void main() {
       var plotExample = plot(ax: n, lines: [line]);
 
       await saveSvg(plotExample, directory + 'plotBigSet');
+    });
+
+    test('plot 2 lines', () async {
+      var N = 0.1;
+      var n = linspace(0, N, num: 1000, endpoint: false);
+      var f1 = 60.0;
+      var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+      var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
+
+      var line = PlotLine(ay: sg);
+      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'));
+      var plotExample = plot(ax: n, lines: [line, line2]);
+
+      await saveSvg(plotExample, directory + 'plot2Lines');
+    });
+
+    test('plot 2 lines 1 dashed', () async {
+      var N = 0.1;
+      var n = linspace(0, N, num: 1000, endpoint: false);
+      var f1 = 60.0;
+      var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+      var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
+
+      var line = PlotLine(ay: sg, strokeDasharray: '5,5');
+      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'));
+      var plotExample = plot(ax: n, lines: [line, line2]);
+
+      await saveSvg(plotExample, directory + 'plot2Lines1Dashed');
+    });
+
+    test('plot 3 lines 2 dashed', () async {
+      var N = 0.1;
+      var n = linspace(0, N, num: 1000, endpoint: false);
+      var f1 = 60.0;
+      var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+      var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
+      var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
+
+      var line = PlotLine(ay: sg, strokeDasharray: '20,20');
+      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'), strokeDasharray: '5,5');
+      var line3 = PlotLine(ay: sg3, color: Color.hex('ff8c00'));
+      var plotExample = plot(ax: n, lines: [line, line2, line3]);
+
+      await saveSvg(plotExample, directory + 'plot3Lines1Dashed');
     });
   });
 }

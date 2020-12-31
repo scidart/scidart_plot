@@ -8,13 +8,16 @@ class PlotLine {
   Array ay;
   String id;
   Color color;
+  String strokeDasharray;
 
   PlotLine({@required Array ay,
         Color color,
+        String strokeDasharray,
         id = 'plot_line'}) {
       this.ay = ay;
       this.id = id;
-      this.color ??= Color.hex('#ff0000');
+      this.color = color ?? Color.hex('#ff0000');
+      this.strokeDasharray = strokeDasharray ?? '';
   }
 
   SvgWidget generateLine(Array ax, double xStart, double xEnd, double yStart, double yEnd,
@@ -38,7 +41,7 @@ class PlotLine {
       var yPoint = ((yEnd - yStart) * (ay[i] + yMin) / (yMax - yMin)) + yEnd;
       points.add(PointPair(x: xPoint, y: yPoint));
     }
-    widgets.add(Polyline(points: points, stroke: color));
+    widgets.add(Polyline(points: points, stroke: color, strokeDasharray: strokeDasharray));
 
     return Group(id: id, children: widgets);
   }
