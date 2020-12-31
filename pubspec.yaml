@@ -9,9 +9,9 @@ environment:
 dependencies:
   color: ^2.1.1
   meta: ^1.1.7
-  scidart: ^0.0.1-dev.8
-  scidart_io: ^0.0.1-dev.5
+  scidart: ^0.0.1-dev.9
 
 dev_dependencies:
-  pedantic: ^1.7.0
-  test: ^1.6.0
+  pedantic: ^1.9.2
+  test: ^1.15.7
+  scidart_io: ^0.0.1-dev.6

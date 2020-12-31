@@ -60,8 +60,8 @@ class Circle implements SvgWidget {
 
   @override
   String toXML() {
-    var xml = '<circle cx="${cx}${unitConv(unit)}" cy="${cy}${unitConv(
-        unit)}" r="${r}${unitConv(unit)}" '
+    var xml = '<circle cx="${roundPixels(cx, unit)}" cy="${roundPixels(cy, unit)}" '
+        'r="${roundPixels(r, unit)}" '
         '${attributes(
         id,
         fill,

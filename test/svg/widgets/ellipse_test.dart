@@ -1,6 +1,8 @@
 import 'package:scidart_plot/scidart_plot.dart';
 import 'package:test/test.dart';
 
+import '../../helpers.dart';
+
 void main() {
   const directory = './test_files/';
 
@@ -10,7 +12,7 @@ void main() {
         Ellipse(cx: 10, cy: 10, rx: 10, ry: 5, stroke: Color.hex('000000'))
       ]);
 
-      await svg.save(directory + 'ellipseSvg');
+      await saveSvg(svg, directory + 'ellipseSvg');
     });
 
     test('Create a Ellipse', () async {
@@ -26,7 +28,7 @@ void main() {
             strokeDasharray: '1% 1%')
       ]);
 
-      await svg.save(directory + 'ellipseComplexSvg');
+      await saveSvg(svg, directory + 'ellipseComplexSvg');
     });
   });
 }

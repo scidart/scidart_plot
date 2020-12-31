@@ -63,9 +63,8 @@ class Rect implements SvgWidget {
 
   @override
   String toXML() {
-    var xml = '<rect x="${x}${unitConv(unit)}" y="${y}${unitConv(
-        unit)}" width="${width}${unitConv(unit)}" height="${height}${unitConv(
-        unit)}" '
+    var xml = '<rect x="${roundPixels(x, unit)}" y="${roundPixels(y, unit)}" '
+        'width="${roundPixels(width, unit)}" height="${roundPixels(height, unit)}" '
         '${attributes(
         id,
         fill,

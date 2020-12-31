@@ -63,7 +63,7 @@ class Text implements SvgWidget {
 
   @override
   String toXML() {
-    var xml = '<text x="${x}${unitConv(unit)}" y="${y}${unitConv(unit)}" '
+    var xml = '<text x="${roundPixels(x, unit)}" y="${roundPixels(y, unit)}" '
         '${attributes(
         id,
         fill,

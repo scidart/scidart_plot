@@ -63,8 +63,8 @@ class Line implements SvgWidget {
 
   @override
   String toXML() {
-    var xml = '<line x1="${x1}${unitConv(unit)}" y1="${y1}${unitConv(
-        unit)}" x2="${x2}${unitConv(unit)}" y2="${y2}${unitConv(unit)}" '
+    var xml = '<line x1="${roundPixels(x1, unit)}" y1="${roundPixels(y1, unit)}" '
+        'x2="${roundPixels(x2, unit)}" y2="${roundPixels(y2, unit)}" '
         '${attributes(
         id,
         fill,

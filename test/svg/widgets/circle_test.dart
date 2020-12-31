@@ -1,6 +1,8 @@
 import 'package:scidart_plot/scidart_plot.dart';
 import 'package:test/test.dart';
 
+import '../../helpers.dart';
+
 void main() {
   const directory = './test_files/';
 
@@ -10,7 +12,7 @@ void main() {
         Circle(cx: 10, cy: 10, r: 10, stroke: Color.hex('000000'))
       ]);
 
-      await svg.save(directory + 'circleSvg');
+      await saveSvg(svg, directory + 'circleSvg');
     });
 
     test('Create a circle complex', () async {
@@ -25,7 +27,7 @@ void main() {
             strokeDasharray: '1% 1%')
       ]);
 
-      await svg.save(directory + 'circleComplexSvg');
+      await saveSvg(svg, directory + 'circleComplexSvg');
     });
 
     test('Create a invisible circle complex', () async {
@@ -41,7 +43,7 @@ void main() {
             visibility: Visibility.hidden)
       ]);
 
-      await svg.save(directory + 'circleComplexInvisibleSvg');
+      await saveSvg(svg, directory + 'circleComplexInvisibleSvg');
     });
   });
 }

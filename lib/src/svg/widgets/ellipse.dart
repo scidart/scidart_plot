@@ -64,8 +64,8 @@ class Ellipse implements SvgWidget {
 
   @override
   String toXML() {
-    var xml = '<ellipse cx="${cx}${unitConv(unit)}" cy="${cx}${unitConv(
-        unit)}" rx="${rx}${unitConv(unit)}" ry="${ry}${unitConv(unit)}" '
+    var xml = '<ellipse cx="${roundPixels(cx, unit)}" cy="${roundPixels(cx, unit)}" '
+        'rx="${roundPixels(rx, unit)}" ry="${roundPixels(ry, unit)}" '
         '${attributes(
         id,
         fill,

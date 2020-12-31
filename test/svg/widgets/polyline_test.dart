@@ -2,6 +2,8 @@ import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/svg/primitives/point_pair.dart';
 import 'package:test/test.dart';
 
+import '../../helpers.dart';
+
 void main() {
   const directory = './test_files/';
 
@@ -19,7 +21,7 @@ void main() {
         )
       ]);
 
-      await svg.save(directory + 'polylineSvg');
+      await saveSvg(svg, directory + 'polylineSvg');
     });
 
     test('Create a Polyline', () async {
@@ -37,7 +39,7 @@ void main() {
             strokeDasharray: '1% 1%')
       ]);
 
-      await svg.save(directory + 'polylineComplexSvg');
+      await saveSvg(svg, directory + 'polylineComplexSvg');
     });
   });
 }

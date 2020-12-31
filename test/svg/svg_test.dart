@@ -2,6 +2,8 @@ import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/svg/primitives/point_pair.dart';
 import 'package:test/test.dart';
 
+import '../helpers.dart';
+
 void main() {
   const directory = './test_files/';
   group('svg', () {
@@ -21,7 +23,7 @@ void main() {
         ], stroke: RgbColor.name('indigo'), strokeWidth: 2)
       ]);
 
-      await svg.save(directory + 'simpleSvg');
+      await saveSvg(svg, directory + 'simpleSvg');
     });
   });
 }

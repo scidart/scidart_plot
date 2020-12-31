@@ -2,6 +2,8 @@ import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/svg/widgets/group.dart';
 import 'package:test/test.dart';
 
+import '../../helpers.dart';
+
 void main() {
   const directory = './test_files/';
 
@@ -14,7 +16,7 @@ void main() {
         ], stroke: Color.hex('FFFFF'))
       ]);
 
-      await svg.save(directory + 'groupSvg');
+      await saveSvg(svg, directory + 'groupSvg');
     });
 
     test('Create a invisible group', () async {
@@ -25,7 +27,7 @@ void main() {
         ], stroke: Color.hex('000000'), visibility: Visibility.hidden)
       ]);
 
-      await svg.save(directory + 'groupInvisibleSvg');
+      await saveSvg(svg, directory + 'groupInvisibleSvg');
     });
   });
 }

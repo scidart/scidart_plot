@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
-import 'package:scidart_io/scidart_io.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
+import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 
 /// Main class that handle and generate SVG widgets, can be interpreted like a canvas
 class SvgCanvas {
@@ -24,7 +24,7 @@ class SvgCanvas {
   /// Convert the Svg structure to XML string
   String toXML() {
     var xml = '<?xml version="1.0" encoding="UTF-8" ?>\n'
-        '<svg width="${width}" height="${height}" xmlns="${_xmlns}">\n';
+        '<svg width="${roundPixelsOnly(width)}" height="${roundPixelsOnly(height)}" xmlns="${_xmlns}">\n';
     for (var c in children) {
       xml += '\t' + c.toXML() + '\n';
     }
@@ -35,16 +35,5 @@ class SvgCanvas {
   @override
   String toString() {
     return toXML();
-  }
-
-  /// Save the SVG in a file
-  /// [fileName] the file name, if extension '.svg' is not informed,
-  /// it is added automatically
-  void save(String fileName) async {
-    const extension = '.svg';
-    if (!fileName.toLowerCase().endsWith(extension)) {
-      fileName += extension;
-    }
-    await writeTxt(toXML(), fileName);
   }
 }

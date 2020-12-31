@@ -1,37 +1,23 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
+import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 
 import '../../scidart_plot.dart';
 
-SvgWidget grid({@required double width,
-  @required double height,
-  @required Array ax,
+SvgWidget grid({@required Array ax,
   @required Array ay,
-  @required double frameMarginLeft,
-  @required double frameMarginTop,
-  @required double frameMarginRight,
-  @required double frameMarginButton,
+  @required double xStart,
+  @required double xEnd,
+  @required double yStart,
+  @required double yEnd,
+  @required double distDeltaX,
+  @required double distDeltaY,
   @required frameGridStrokeColor,
   @required frameGridDasharray,
   @required frameAxisStrokeColor,
   @required grid,
   id = 'grid'}) {
-
-  // calculate the margin limits
-  final xStart = frameMarginLeft;
-  final xEnd = width - frameMarginRight;
-  final yStart = frameMarginTop;
-  final yEnd = height - frameMarginButton;
-
-  // calculate X axis distribution
-  final lengthX = xEnd - xStart;
-  final distDeltaX = lengthX / ax.length;
-
-  // calculate Y axis distribution
-  final lengthY = yEnd - yStart;
-  final distDeltaY = lengthY / ay.length;
-
   // main widgets list
   var widgets = <SvgWidget>[];
 
@@ -51,9 +37,9 @@ SvgWidget grid({@required double width,
       y2: yEnd,
       stroke: frameAxisStrokeColor));
 
-  // draw X axis marx
+  // draw X axis mark
   for(var i = 0; i < ax.length; i++) {
-    var xPoint = _calcXPoint(xStart, i, distDeltaX);
+    var xPoint = calcXPoint(xStart, i, distDeltaX);
     widgets.add(Line(
         x1:  xPoint,
         y1: yEnd,
@@ -65,7 +51,7 @@ SvgWidget grid({@required double width,
 
   // draw Y axis mark
   for(var i = 0; i < ay.length; i++) {
-    var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+    var yPoint = calcYPoint(yEnd, i, distDeltaY);
     widgets.add(Line(
         x1:  xStart,
         y1: yPoint,
@@ -80,7 +66,7 @@ SvgWidget grid({@required double width,
     // if delta is too small, only draw the texts in even position to optimize the space
     for(var i = 0; i < ax.length; i++) {
       if (i.isEven) {
-        var xPoint = _calcXPoint(xStart, i, distDeltaX);
+        var xPoint = calcXPoint(xStart, i, distDeltaX);
         widgets.add(Text(x: xPoint,
             y: yEnd + 10,
             text: truncate(ax[i], 4).toString().toString(),
@@ -89,7 +75,7 @@ SvgWidget grid({@required double width,
     }
   } else {
     for(var i = 0; i < ax.length; i++) {
-      var xPoint = _calcXPoint(xStart, i, distDeltaX);
+      var xPoint = calcXPoint(xStart, i, distDeltaX);
       widgets.add(Text(x: xPoint,
           y: yEnd + 10,
           text: truncate(ax[i], 4).toString().toString(),
@@ -102,7 +88,7 @@ SvgWidget grid({@required double width,
     // if delta is too small, only draw the texts in even position to optimize the space
     for(var i = 0; i < ay.length; i++) {
       if (i.isEven) {
-        var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+        var yPoint = calcYPoint(yEnd, i, distDeltaY);
         widgets.add(Text(x: xStart,
             y: yPoint,
             text: truncate(ay[i], 4).toString().toString(),
@@ -111,7 +97,7 @@ SvgWidget grid({@required double width,
     }
   } else {
     for(var i = 0; i < ay.length; i++) {
-      var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+      var yPoint = calcYPoint(yEnd, i, distDeltaY);
       widgets.add(Text(x: 0,
           y: yPoint,
           text: truncate(ay[i], 4).toString().toString(),
@@ -126,7 +112,7 @@ SvgWidget grid({@required double width,
       // if delta is too small, only draw the texts in even position to optimize the space
       for (var i = 1; i < ax.length; i++) {
         if (i.isEven) {
-          var xPoint = _calcXPoint(xStart, i, distDeltaX);
+          var xPoint = calcXPoint(xStart, i, distDeltaX);
           widgets.add(Line(
               x1: xPoint,
               y1: yStart,
@@ -139,7 +125,7 @@ SvgWidget grid({@required double width,
       }
     } else {
       for (var i = 1; i < ax.length; i++) {
-        var xPoint = _calcXPoint(xStart, i, distDeltaX);
+        var xPoint = calcXPoint(xStart, i, distDeltaX);
         widgets.add(Line(
             x1: xPoint,
             y1: yStart,
@@ -156,7 +142,7 @@ SvgWidget grid({@required double width,
       // if delta is too small, only draw the texts in even position to optimize the space
       for (var i = 1; i < ay.length; i++) {
         if (i.isEven) {
-          var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+          var yPoint = calcYPoint(yEnd, i, distDeltaY);
           widgets.add(Line(
               x1: xStart,
               y1: yPoint,
@@ -169,7 +155,7 @@ SvgWidget grid({@required double width,
       }
     } else {
       for (var i = 1; i < ay.length; i++) {
-        var yPoint = _calcYPoint(yEnd, i, distDeltaY);
+        var yPoint = calcYPoint(yEnd, i, distDeltaY);
         widgets.add(Line(
             x1: xStart,
             y1: yPoint,
@@ -183,12 +169,4 @@ SvgWidget grid({@required double width,
   }
 
   return Group(id: id, children: widgets);
-}
-
-double _calcXPoint(double xStart, int i, double distDeltaX) {
-  return xStart + (i * distDeltaX);
-}
-
-double _calcYPoint(double yEnd, int i, double distDeltaY) {
-  return yEnd - (i * distDeltaY);
 }
