@@ -30,7 +30,7 @@ void main() {
             x2: 100,
             y2: 100,
             stroke: Color.rgb(10, 200, 39),
-            strokeWidth: 10,
+            strokeWidth: StrokeWidth.width10,
             strokeDasharray: StrokeDasharray.dash1)
       ]);
 

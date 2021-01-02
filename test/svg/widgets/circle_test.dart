@@ -24,7 +24,7 @@ void main() {
             r: 10,
             fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
-            strokeWidth: 1,
+            strokeWidth: StrokeWidth.width1,
             strokeDasharray: StrokeDasharray.dash1)
       ]);
 
@@ -39,7 +39,7 @@ void main() {
             r: 10,
             fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
-            strokeWidth: 1,
+            strokeWidth: StrokeWidth.width1,
             strokeDasharray: StrokeDasharray.custom('1% 1%'),
             visibility: Visibility.hidden)
       ]);

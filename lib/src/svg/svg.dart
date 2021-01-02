@@ -2,6 +2,10 @@ library svg;
 
 export './canvas/svg_canvas.dart';
 export './primitives/point_pair.dart';
+export 'enums/color.dart';
+export 'enums/stroke_dasharray.dart';
+export 'enums/stroke_width.dart';
+export 'enums/unit.dart';
 export 'enums/visibility.dart';
 export './widgets/circle.dart';
 export './widgets/ellipse.dart';

@@ -20,7 +20,7 @@ void main() {
           PointPair(x: 100, y: 100),
           PointPair(x: 0, y: 100),
           PointPair(x: 0, y: 0),
-        ], stroke: Color.indigo, strokeWidth: 2)
+        ], stroke: Color.indigo, strokeWidth: StrokeWidth.width2)
       ]);
 
       await saveSvg(svg, directory + 'simpleSvg');

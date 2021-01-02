@@ -25,7 +25,7 @@ void main() {
             ry: 5,
             fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
-            strokeWidth: 1,
+            strokeWidth: StrokeWidth.width1,
             strokeDasharray: StrokeDasharray.dash1)
       ]);
 

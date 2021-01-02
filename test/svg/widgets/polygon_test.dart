@@ -36,7 +36,7 @@ void main() {
             ],
             fill: Color.rgb(100, 100, 8),
             stroke: Color.rgb(10, 200, 39),
-            strokeWidth: 5,
+            strokeWidth: StrokeWidth.width5,
             strokeDasharray: StrokeDasharray.dash1)
       ]);
 

@@ -1,5 +1,6 @@
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
 import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
 
@@ -17,7 +18,7 @@ abstract class SvgWidget {
   String id;
   Color fill;
   Color stroke;
-  double strokeWidth;
+  StrokeWidth strokeWidth;
   StrokeDasharray strokeDasharray;
   String style;
   String transform;
