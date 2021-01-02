@@ -1,8 +1,6 @@
 import 'package:scidart/numdart.dart';
-import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/plot/plot.dart';
-import 'package:scidart_plot/src/plot/plot_line.dart';
-import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/svg.dart';
 import 'package:test/test.dart';
 
 import '../helpers.dart';
@@ -21,7 +19,7 @@ void main() {
       //https://google.github.io/charts/flutter/example/line_charts/simple
 
       var line = PlotLine(ay: sg);
-      var plotExample = plot(ax: n, lines: [line]);
+      var plotExample = canvasLine(ax: n, lines: [line]);
 
       await saveSvg(plotExample, directory + 'plotSimple');
     });
@@ -34,7 +32,7 @@ void main() {
       print(sg);
 
       var line = PlotLine(ay: sg);
-      var plotExample = plot(ax: n, lines: [line]);
+      var plotExample = canvasLine(ax: n, lines: [line]);
 
       await saveSvg(plotExample, directory + 'plotSmallSet');
     });
@@ -47,7 +45,7 @@ void main() {
       print(sg);
 
       var line = PlotLine(ay: sg);
-      var plotExample = plot(ax: n, lines: [line]);
+      var plotExample = canvasLine(ax: n, lines: [line]);
 
       await saveSvg(plotExample, directory + 'plotBigSet');
     });
@@ -61,7 +59,7 @@ void main() {
 
       var line = PlotLine(ay: sg);
       var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'));
-      var plotExample = plot(ax: n, lines: [line, line2]);
+      var plotExample = canvasLine(ax: n, lines: [line, line2]);
 
       await saveSvg(plotExample, directory + 'plot2Lines');
     });
@@ -75,7 +73,7 @@ void main() {
 
       var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5);
       var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'));
-      var plotExample = plot(ax: n, lines: [line, line2]);
+      var plotExample = canvasLine(ax: n, lines: [line, line2]);
 
       await saveSvg(plotExample, directory + 'plot2Lines1Dashed');
     });
@@ -91,7 +89,7 @@ void main() {
       var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash20);
       var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'), strokeDasharray: StrokeDasharray.dash5);
       var line3 = PlotLine(ay: sg3, color: Color.hex('ff8c00'));
-      var plotExample = plot(ax: n, lines: [line, line2, line3]);
+      var plotExample = canvasLine(ax: n, lines: [line, line2, line3]);
 
       await saveSvg(plotExample, directory + 'plot3Lines2Dashed');
     });

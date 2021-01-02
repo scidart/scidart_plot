@@ -4,7 +4,7 @@ import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 
-import '../../scidart_plot.dart';
+import '../../../scidart_plot.dart';
 
 SvgWidget grid({@required Array ax,
   @required Array ay,
