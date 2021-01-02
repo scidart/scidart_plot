@@ -1,4 +1,4 @@
-import 'package:color/color.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
 

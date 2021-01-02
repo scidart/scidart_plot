@@ -22,7 +22,7 @@ void main() {
             cx: 10,
             cy: 10,
             r: 10,
-            fill: RgbColor(14, 200, 34),
+            fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
             strokeWidth: 1,
             strokeDasharray: StrokeDasharray.dash1)
@@ -37,7 +37,7 @@ void main() {
             cx: 10,
             cy: 10,
             r: 10,
-            fill: RgbColor(14, 200, 34),
+            fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
             strokeWidth: 1,
             strokeDasharray: StrokeDasharray.custom('1% 1%'),

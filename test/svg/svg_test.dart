@@ -9,18 +9,18 @@ void main() {
   group('svg', () {
     test('Create a simple svg', () async {
       var svg = SvgCanvas(height: 100, width: 100, children: [
-        Circle(cx: 10, cy: 10, r: 5, stroke: RgbColor.name('chocolate')),
+        Circle(cx: 10, cy: 10, r: 5, stroke: Color.chocolate),
         Text(x: 5,
             y: 30,
             text: 'some text to test',
-            fill: RgbColor.name('blueviolet')),
+            fill: Color.blueviolet),
         Polyline(points: [
           PointPair(x: 0, y: 0),
           PointPair(x: 100, y: 0),
           PointPair(x: 100, y: 100),
           PointPair(x: 0, y: 100),
           PointPair(x: 0, y: 0),
-        ], stroke: RgbColor.name('indigo'), strokeWidth: 2)
+        ], stroke: Color.indigo, strokeWidth: 2)
       ]);
 
       await saveSvg(svg, directory + 'simpleSvg');

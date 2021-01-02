@@ -23,7 +23,7 @@ void main() {
             cy: 10,
             rx: 10,
             ry: 5,
-            fill: RgbColor(14, 200, 34),
+            fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
             strokeWidth: 1,
             strokeDasharray: StrokeDasharray.dash1)

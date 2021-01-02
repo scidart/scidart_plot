@@ -17,9 +17,7 @@ class StrokeDasharray {
     return StrokeDasharray(value);
   }
 
-  String get xmlValue => _value;
-
   static String toXml(StrokeDasharray strokeDasharray) {
-    return strokeDasharray != null ? strokeDasharray.xmlValue : StrokeDasharray.none.xmlValue;
+    return strokeDasharray != null ? strokeDasharray._value : StrokeDasharray.none._value;
   }
 }

@@ -23,7 +23,7 @@ void main() {
             y: 10,
             text: 'lorem ipsum',
             rotate: 45,
-            fill: RgbColor(14, 200, 34),
+            fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
             strokeWidth: 1,
             strokeDasharray: StrokeDasharray.dash1)

@@ -1,6 +1,7 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/scidart_plot.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
