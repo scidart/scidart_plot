@@ -1,6 +1,7 @@
 import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
@@ -30,7 +31,7 @@ class Ellipse implements SvgWidget {
   @override
   String transform;
   @override
-  String unit;
+  Unit unit;
   @override
   Visibility visibility;
 
@@ -60,7 +61,7 @@ class Ellipse implements SvgWidget {
         this.strokeDasharray,
         this.style,
         this.transform,
-        this.unit = 'px',
+        this.unit,
         this.visibility = Visibility.inherit});
 
   @override

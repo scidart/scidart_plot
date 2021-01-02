@@ -169,6 +169,12 @@ class Color {
   }
 
   static String toXml(Color color) {
-    return color != null ? color._value : Color.black._value;
+    var colorStr = color != null ? color._value : Color.none._value;
+    try {
+      int.parse(colorStr, radix: 16);
+      return '#' + colorStr;
+    } on FormatException {
+      return colorStr;
+    }
   }
 }

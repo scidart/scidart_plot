@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg width="100.0" height="100.0" xmlns="http://www.w3.org/2000/svg">
-	<line x1="0.0px" y1="0.0px" x2="100.0px" y2="100.0px" id="none" fill="black" stroke="0a0a0a" stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="0.0px" y1="0.0px" x2="100.0px" y2="100.0px" id="none" fill="none" stroke="#0a0a0a" stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit" />
 </svg>

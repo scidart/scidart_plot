@@ -1,11 +1,8 @@
 import 'package:scidart/numdart.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
 
-String unitConv(String unit) {
-  return '${unit ?? 'px'}';
-}
-
-String roundPixels(double val, String unit) {
-  return '${truncate(val, 1)}${unitConv(unit)}';
+String roundPixels(double val, Unit unit) {
+  return '${truncate(val, 1)}${unit.xmlValue}';
 }
 
 String roundPixelsOnly(double val) {

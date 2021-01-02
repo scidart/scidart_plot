@@ -1,6 +1,7 @@
 import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
@@ -26,7 +27,7 @@ class Group implements SvgWidget {
   @override
   String transform;
   @override
-  String unit;
+  Unit unit;
   @override
   Visibility visibility;
 
@@ -50,7 +51,7 @@ class Group implements SvgWidget {
       this.strokeWidth,
       this.style,
       this.transform,
-      this.unit = 'px',
+      this.unit,
       this.visibility = Visibility.inherit});
 
   @override

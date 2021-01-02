@@ -1,5 +1,6 @@
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
 
 // References
@@ -21,7 +22,7 @@ abstract class SvgWidget {
   String style;
   String transform;
   Visibility visibility;
-  String unit;
+  Unit unit;
 
   // methods
   /// Convert the Svg structure to XML string
