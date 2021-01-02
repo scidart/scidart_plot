@@ -58,7 +58,7 @@ void main() {
       var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
 
       var line = PlotLine(ay: sg);
-      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'));
+      var line2 = PlotLine(ay: sg2, color: Color.blue);
       var plotExample = canvasLine(ax: n, lines: [line, line2]);
 
       await saveSvg(plotExample, directory + 'plot2Lines');
@@ -87,8 +87,8 @@ void main() {
       var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
       var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash20);
-      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'), strokeDasharray: StrokeDasharray.dash5);
-      var line3 = PlotLine(ay: sg3, color: Color.hex('ff8c00'));
+      var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+      var line3 = PlotLine(ay: sg3, color: Color.orange);
       var plotExample = canvasLine(ax: n, lines: [line, line2, line3]);
 
       await saveSvg(plotExample, directory + 'plot3Lines2Dashed');

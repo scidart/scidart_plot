@@ -1,7 +1,9 @@
 import 'package:meta/meta.dart';
+import 'package:scidart_plot/src/svg/enums/alignment_y.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
+import 'package:scidart_plot/src/svg/enums/text_anchor.dart';
 import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
@@ -15,6 +17,8 @@ class Text implements SvgWidget {
   double y;
   String text;
   double rotate;
+  TextAnchor textAnchor;
+  AlignmentY alignmentY;
 
   //override
   @override
@@ -60,13 +64,17 @@ class Text implements SvgWidget {
       this.strokeWidth,
       this.strokeDasharray,
       this.style,
-        this.transform,
-        this.unit,
-        this.visibility = Visibility.inherit});
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit,
+      this.textAnchor = TextAnchor.start,
+      this.alignmentY = AlignmentY.bottom});
 
   @override
   String toXML() {
     var xml = '<text x="${roundPixels(x, unit)}" y="${roundPixels(y, unit)}" '
+        'text-anchor="${textAnchor.xmlValue}" '
+        'dy="${alignmentY.xmlValue}" '
         '${attributes(
         id,
         fill,

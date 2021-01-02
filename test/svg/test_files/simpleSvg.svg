@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg width="100.0" height="100.0" xmlns="http://www.w3.org/2000/svg">
 	<circle cx="10.0px" cy="10.0px" r="5.0px" id="none" fill="none" stroke="chocolate" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<text x="5.0px" y="30.0px" id="none" fill="blueviolet" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >some text to test</text>
+	<text x="5.0px" y="30.0px" text-anchor="start"id="none" fill="blueviolet" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >some text to test</text>
 	<polyline points="0.0,0.0 100.0,0.0 100.0,100.0 0.0,100.0 0.0,0.0 " id="none" fill="none" stroke="indigo" stroke-width="2.0px" stroke-dasharray="none" style="none" visibility="inherit" />
 </svg>

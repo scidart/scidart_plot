@@ -13,12 +13,12 @@ import 'grid.dart';
 SvgCanvas canvasLine({@required Array ax,
             @required List<PlotLine> lines,
             double width = 404.0,
-            double height = 278.0,
+            double height = 288.0,
             bool showGrid = true}) {
   var frameMarginLeft = 50.0;
   var frameMarginTop = 10.0;
   var frameMarginRight = 10.0;
-  var frameMarginButton = 20.0;
+  var frameMarginButton = 30.0;
 
   // calculate the margin limits
   final xStart = frameMarginLeft;

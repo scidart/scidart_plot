@@ -99,18 +99,20 @@ SvgWidget grid({@required Array ax,
       if (_deltaXSmallRule(i, distDeltaX)) {
         var xPoint = calcXPoint(xStart, i, distDeltaX);
         widgets.add(Text(x: xPoint,
-            y: yEnd + 10,
+            y: yEnd + 20,
             text: truncate(ax[i], 4).toString().toString(),
-            fill: frameAxisStrokeColor));
+            fill: frameAxisStrokeColor,
+            textAnchor: TextAnchor.middle));
       }
     }
   } else {
     for(var i = 0; i < ax.length; i++) {
       var xPoint = calcXPoint(xStart, i, distDeltaX);
       widgets.add(Text(x: xPoint,
-          y: yEnd + 10,
+          y: yEnd + 20,
           text: truncate(ax[i], 4).toString().toString(),
-          fill: frameAxisStrokeColor));
+          fill: frameAxisStrokeColor,
+          textAnchor: TextAnchor.middle));
     }
   }
     
@@ -120,19 +122,23 @@ SvgWidget grid({@required Array ax,
     for(var i = 0; i < ay.length; i++) {
       if (_deltaYSmallRule(i, distDeltaY)) {
         var yPoint = calcYPoint(yEnd, i, distDeltaY);
-        widgets.add(Text(x: 0,
+        widgets.add(Text(x: xStart - 10,
             y: yPoint,
             text: truncate(ay[i], 4).toString().toString(),
-            fill: frameAxisStrokeColor));
+            fill: frameAxisStrokeColor,
+            textAnchor: TextAnchor.end,
+            alignmentY: AlignmentY.central));
       }
     }
   } else {
     for(var i = 0; i < ay.length; i++) {
       var yPoint = calcYPoint(yEnd, i, distDeltaY);
-      widgets.add(Text(x: 0,
+      widgets.add(Text(x: xStart - 10,
           y: yPoint,
           text: truncate(ay[i], 4).toString().toString(),
-          fill: frameAxisStrokeColor));
+          fill: frameAxisStrokeColor,
+          textAnchor: TextAnchor.end,
+          alignmentY: AlignmentY.central));
     }
   }
 

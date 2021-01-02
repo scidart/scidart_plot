@@ -3,7 +3,6 @@ import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
 import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
-import 'unit_converter.dart';
 
 String attributes(
     String id,
