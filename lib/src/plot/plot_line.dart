@@ -32,13 +32,11 @@ class PlotLine {
     var points = <PointPair>[];
     for(var i = 0; i < ax.length; i++) {
       var xPoint = calcXPoint(xStart, i, distDeltaX);
-      //var yPoint = calcYPoint(yEnd, i, distDeltaY);
-      // ymin ------- yEnd
-      // ymax ------- yStart
-      // lengthY / distDeltaY
-      // yi - ymin / ymax - ymin = yo - min / max - min
-      // yi = (yminx - ymin) * (y0 - min) / (max - min) + ymin
-      var yPoint = ((yEnd - yStart) * (ay[i] + yMin) / (yMax - yMin)) + yEnd;
+      // http://www.pstcc.edu/nbs/WebPhysics/Chapter12.htm
+      // (- yEnd + yPoint) / (yEnd - yStart) = (yMin - ay[i]) / (yMax - yMin)
+      // (- yEnd + yPoint) = (yEnd - yStart) * (yMin - ay[i]) / (yMax - yMin)
+      //  yPoint = yEnd + ((yEnd - yStart) * (yMin - ay[i]) / (yMax - yMin))
+      var yPoint = yEnd + ((yEnd - yStart) * (yMin - ay[i]) / (yMax - yMin));
       points.add(PointPair(x: xPoint, y: yPoint));
     }
     widgets.add(Polyline(points: points, stroke: color, strokeDasharray: strokeDasharray));

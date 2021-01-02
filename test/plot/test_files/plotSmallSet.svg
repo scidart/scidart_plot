@@ -61,7 +61,7 @@
 	<line x1="50.0px" y1="59.6px" x2="394.0px" y2="59.6px" id="none" fill="none" stroke="#5f6367" stroke-width="nonepx" stroke-dasharray="5,5" style="none" visibility="inherit" />
 	<line x1="50.0px" y1="34.8px" x2="394.0px" y2="34.8px" id="none" fill="none" stroke="#5f6367" stroke-width="nonepx" stroke-dasharray="5,5" style="none" visibility="inherit" />
 </g>
-	<g id="lines" fill="none" stroke="none" stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit" >	<g id="plot_line" fill="none" stroke="none" stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit" >	<polyline points="50.0,134.0 84.4,57.4 118.8,258.0 153.2,10.0 187.6,210.6 222.0,134.0 256.4,57.4 290.8,258.0 325.2,10.0 359.6,210.6 " id="none" fill="none" stroke="#ff0000" stroke-width="nonepx" stroke-dasharray="" style="none" visibility="inherit" />
+	<g id="lines" fill="none" stroke="none" stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit" >	<g id="plot_line" fill="none" stroke="none" stroke-width="nonepx" stroke-dasharray="none" style="none" visibility="inherit" >	<polyline points="50.0,134.0 84.4,210.6 118.8,10.0 153.2,258.0 187.6,57.4 222.0,134.0 256.4,210.6 290.8,10.0 325.2,258.0 359.6,57.4 " id="none" fill="none" stroke="#ff0000" stroke-width="nonepx" stroke-dasharray="" style="none" visibility="inherit" />
 </g>
 </g>
 </svg>

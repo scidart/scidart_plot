@@ -30,6 +30,7 @@ void main() {
       var n = linspace(0, N, num: 10, endpoint: false);
       var f1 = 60.0;
       var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+      print(sg);
 
       var line = PlotLine(ay: sg);
       var plotExample = plot(ax: n, lines: [line]);
@@ -42,6 +43,7 @@ void main() {
       var n = linspace(0, N, num: 1000, endpoint: false);
       var f1 = 60.0;
       var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+      print(sg);
 
       var line = PlotLine(ay: sg);
       var plotExample = plot(ax: n, lines: [line]);
@@ -90,7 +92,7 @@ void main() {
       var line3 = PlotLine(ay: sg3, color: Color.hex('ff8c00'));
       var plotExample = plot(ax: n, lines: [line, line2, line3]);
 
-      await saveSvg(plotExample, directory + 'plot3Lines1Dashed');
+      await saveSvg(plotExample, directory + 'plot3Lines2Dashed');
     });
   });
 }
