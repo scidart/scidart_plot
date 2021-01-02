@@ -1,5 +1,6 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 
@@ -14,7 +15,7 @@ SvgWidget grid({@required Array ax,
   @required double distDeltaX,
   @required double distDeltaY,
   @required frameGridStrokeColor,
-  @required frameGridDasharray,
+  @required StrokeDasharray frameGridDasharray,
   @required frameAxisStrokeColor,
   @required grid,
   id = 'grid'}) {

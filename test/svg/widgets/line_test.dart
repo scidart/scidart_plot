@@ -1,4 +1,5 @@
 import 'package:scidart_plot/scidart_plot.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:test/test.dart';
 
 import '../../helpers.dart';
@@ -30,7 +31,7 @@ void main() {
             y2: 100,
             stroke: Color.rgb(10, 200, 39),
             strokeWidth: 10,
-            strokeDasharray: '1% 1%')
+            strokeDasharray: StrokeDasharray.dash1)
       ]);
 
       await saveSvg(svg, directory + 'lineComplexSvg');

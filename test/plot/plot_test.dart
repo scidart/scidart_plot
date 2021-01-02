@@ -2,6 +2,7 @@ import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/plot/plot.dart';
 import 'package:scidart_plot/src/plot/plot_line.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:test/test.dart';
 
 import '../helpers.dart';
@@ -72,7 +73,7 @@ void main() {
       var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
       var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
 
-      var line = PlotLine(ay: sg, strokeDasharray: '5,5');
+      var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5);
       var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'));
       var plotExample = plot(ax: n, lines: [line, line2]);
 
@@ -87,8 +88,8 @@ void main() {
       var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
       var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-      var line = PlotLine(ay: sg, strokeDasharray: '20,20');
-      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'), strokeDasharray: '5,5');
+      var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash20);
+      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'), strokeDasharray: StrokeDasharray.dash5);
       var line3 = PlotLine(ay: sg3, color: Color.hex('ff8c00'));
       var plotExample = plot(ax: n, lines: [line, line2, line3]);
 

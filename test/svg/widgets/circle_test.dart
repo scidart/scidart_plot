@@ -1,4 +1,5 @@
 import 'package:scidart_plot/scidart_plot.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:test/test.dart';
 
 import '../../helpers.dart';
@@ -24,7 +25,7 @@ void main() {
             fill: RgbColor(14, 200, 34),
             stroke: Color.hex('000000'),
             strokeWidth: 1,
-            strokeDasharray: '1% 1%')
+            strokeDasharray: StrokeDasharray.dash1)
       ]);
 
       await saveSvg(svg, directory + 'circleComplexSvg');
@@ -39,7 +40,7 @@ void main() {
             fill: RgbColor(14, 200, 34),
             stroke: Color.hex('000000'),
             strokeWidth: 1,
-            strokeDasharray: '1% 1%',
+            strokeDasharray: StrokeDasharray.custom('1% 1%'),
             visibility: Visibility.hidden)
       ]);
 

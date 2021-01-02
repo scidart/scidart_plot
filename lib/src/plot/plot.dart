@@ -3,6 +3,7 @@ import 'package:scidart/src/numdart/arrays_base/array.dart';
 import 'package:scidart_plot/src/plot/plot_line.dart';
 import 'package:scidart_plot/src/svg/canvas/svg_canvas.dart';
 import 'package:scidart/numdart.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import '../../scidart_plot.dart';
@@ -52,7 +53,7 @@ SvgCanvas plot({@required Array ax,
       distDeltaX: distDeltaX,
       distDeltaY: distDeltaY,
       frameGridStrokeColor: Color.hex('5F6367'),
-      frameGridDasharray: '5,5',
+      frameGridDasharray: StrokeDasharray.dash5,
       frameAxisStrokeColor: Color.hex('000000'),
       grid: showGrid,
   );

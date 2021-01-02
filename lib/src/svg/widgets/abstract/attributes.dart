@@ -1,7 +1,6 @@
 import 'package:color/color.dart';
-import 'package:scidart_plot/src/svg/primitives/constants.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
-
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'unit_converter.dart';
 
 String attributes(
@@ -9,7 +8,7 @@ String attributes(
     Color fill,
     Color stroke,
     double strokeWidth,
-    String strokeDasharray,
+    StrokeDasharray strokeDasharray,
     String style,
     String transform,
     String unit,
@@ -18,7 +17,7 @@ String attributes(
       'fill="${fill?.toHexColor()?.toCssString() ?? "none"}" '
       'stroke="${stroke?.toHexColor()?.toCssString() ?? "none"}" '
       'stroke-width="${strokeWidth ?? "none"}${unitConv(unit)}" '
-      'stroke-dasharray="${strokeDasharray ?? "none"}" '
+      'stroke-dasharray="${StrokeDasharray.toXml(strokeDasharray)}" '
       'style="${style ?? "none"}" '
-      'visibility="${visibilityName[visibility] ?? Visibility.inherit}"';
+      'visibility="${visibility.xmlValue ?? Visibility.inherit.xmlValue}"';
 }

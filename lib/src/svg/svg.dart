@@ -2,7 +2,7 @@ library svg;
 
 export './canvas/svg_canvas.dart';
 export './primitives/point_pair.dart';
-export './primitives/visibility.dart';
+export 'enums/visibility.dart';
 export './widgets/circle.dart';
 export './widgets/ellipse.dart';
 export './widgets/group.dart';

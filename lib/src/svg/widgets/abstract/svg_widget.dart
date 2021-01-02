@@ -1,5 +1,6 @@
 import 'package:color/color.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 
 // References
 // https://www.w3schools.com/graphics/svg_intro.asp
@@ -16,7 +17,7 @@ abstract class SvgWidget {
   Color fill;
   Color stroke;
   double strokeWidth;
-  String strokeDasharray;
+  StrokeDasharray strokeDasharray;
   String style;
   String transform;
   Visibility visibility;

@@ -1,7 +1,8 @@
 import 'package:color/color.dart';
 import 'package:meta/meta.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/primitives/point_pair.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
@@ -20,7 +21,7 @@ class Polyline implements SvgWidget {
   @override
   double strokeWidth;
   @override
-  String strokeDasharray;
+  StrokeDasharray strokeDasharray;
   @override
   String style;
   @override

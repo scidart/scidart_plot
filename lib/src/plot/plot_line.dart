@@ -1,6 +1,7 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/scidart_plot.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 
@@ -8,16 +9,16 @@ class PlotLine {
   Array ay;
   String id;
   Color color;
-  String strokeDasharray;
+  StrokeDasharray strokeDasharray;
 
   PlotLine({@required Array ay,
         Color color,
-        String strokeDasharray,
+    StrokeDasharray strokeDasharray,
         id = 'plot_line'}) {
       this.ay = ay;
       this.id = id;
       this.color = color ?? Color.hex('#ff0000');
-      this.strokeDasharray = strokeDasharray ?? '';
+      this.strokeDasharray = strokeDasharray;
   }
 
   SvgWidget generateLine(Array ax, double xStart, double xEnd, double yStart, double yEnd,
