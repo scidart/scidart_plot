@@ -12,10 +12,11 @@ import 'grid.dart';
 
 SvgCanvas canvasLine({@required Array ax,
             @required List<PlotLine> lines,
-            double width = 404.0,
+            double width = 414.0,
             double height = 288.0,
-            bool showGrid = true}) {
-  var frameMarginLeft = 50.0;
+            bool showGrid = true,
+            Color backgroundColor}) {
+  var frameMarginLeft = 60.0;
   var frameMarginTop = 10.0;
   var frameMarginRight = 10.0;
   var frameMarginButton = 30.0;
@@ -53,7 +54,7 @@ SvgCanvas canvasLine({@required Array ax,
       yEnd: yEnd,
       distDeltaX: distDeltaX,
       distDeltaY: distDeltaY,
-      frameGridStrokeColor: Color.hex('5F6367'),
+      frameGridStrokeColor: Color.gray,
       frameGridDasharray: StrokeDasharray.dash5,
       frameAxisStrokeColor: Color.black,
       grid: showGrid,
@@ -66,6 +67,7 @@ SvgCanvas canvasLine({@required Array ax,
   var linesGroup = Group(children: linesSvg, id: 'lines');
 
   var plot = SvgCanvas(
+      fill: backgroundColor,
       width: width, height: height,
       children: [
         plotGrid,

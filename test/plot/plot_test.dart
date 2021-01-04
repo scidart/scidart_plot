@@ -94,4 +94,20 @@ void main() {
       await saveSvg(plotExample, directory + 'plot3Lines2Dashed');
     });
   });
+
+  test('plot 3 lines 2 dashed background', () async {
+    var N = 0.1;
+    var n = linspace(0, N, num: 1000, endpoint: false);
+    var f1 = 60.0;
+    var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+    var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
+    var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
+
+    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var plotExample = canvasLine(ax: n, backgroundColor: Color.white, lines: [line, line2, line3]);
+
+    await saveSvg(plotExample, directory + 'plot3Lines2DashedBackground');
+  });
 }
