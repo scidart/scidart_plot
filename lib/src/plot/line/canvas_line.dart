@@ -1,14 +1,7 @@
 import 'package:meta/meta.dart';
-import 'package:scidart/src/numdart/arrays_base/array.dart';
-import 'package:scidart_plot/src/plot/line/plot_line.dart';
-import 'package:scidart_plot/src/svg/canvas/svg_canvas.dart';
 import 'package:scidart/numdart.dart';
-import 'package:scidart_plot/src/svg/enums/color.dart';
-import 'package:scidart_plot/src/svg/enums/font_size.dart';
-import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
-import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
-
-import '../../../scidart_plot.dart';
+import 'package:scidart_plot/src/svg/svg.dart';
+import '../plot.dart';
 import 'grid.dart';
 
 SvgCanvas canvasLine({@required final Array ax,
@@ -17,7 +10,12 @@ SvgCanvas canvasLine({@required final Array ax,
             double height = 288.0,
             final bool showGrid = true,
             final Color backgroundColor,
-            final String title}) {
+            final String title,
+            final Legend legend,
+            final Color gridColor,
+            final Color axisColor,
+            final Color axisTextColor,
+            }) {
   // default margins
   final frameMarginLeft = 60.0;
   var frameMarginTop = 10.0;
@@ -79,20 +77,26 @@ SvgCanvas canvasLine({@required final Array ax,
       yEnd: yEnd,
       distDeltaX: distDeltaX,
       distDeltaY: distDeltaY,
-      frameGridStrokeColor: Color.gray,
+      frameGridStrokeColor: gridColor ?? Color.gray,
       frameGridDasharray: StrokeDasharray.dash5,
-      frameAxisStrokeColor: Color.black,
+      frameAxisStrokeColor: axisColor ?? Color.black,
+      textAxisStrokeColor: axisTextColor ?? Color.black,
       grid: showGrid,
   );
 
   var linesSvg = <SvgWidget>[];
   for (var l in lines) {
-    linesSvg.add(l.generateLine(ax, xStart, xEnd, yStart, yEnd, distDeltaX, yMin, yMax));
+    linesSvg.add(l.generate(ax, xStart, xEnd, yStart, yEnd, distDeltaX, yMin, yMax));
   }
   var linesGroup = Group(children: linesSvg, id: 'lines');
 
   plot.children.add(plotGrid);
   plot.children.add(linesGroup);
+
+  // add legend to the plot
+  if (legend != null) {
+    plot.children.add(legend.generate(xStart, yStart, xEnd, yEnd, lines));
+  }
 
   return plot;
 }

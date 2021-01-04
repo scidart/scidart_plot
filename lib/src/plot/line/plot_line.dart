@@ -1,10 +1,6 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
-import 'package:scidart_plot/scidart_plot.dart';
-import 'package:scidart_plot/src/svg/enums/color.dart';
-import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
-import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
-import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
+import 'package:scidart_plot/src/svg/svg.dart';
 
 class PlotLine {
   Array ay;
@@ -22,7 +18,7 @@ class PlotLine {
       this.strokeDasharray = strokeDasharray;
   }
 
-  SvgWidget generateLine(Array ax, double xStart, double xEnd, double yStart, double yEnd,
+  SvgWidget generate(Array ax, double xStart, double xEnd, double yStart, double yEnd,
       double distDeltaX, double yMin, double yMax) {
     if (ax.length != ay.length) {
       throw FormatException('expected ax and ay to have same length');

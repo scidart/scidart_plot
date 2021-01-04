@@ -1,10 +1,6 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
-import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
-import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
-import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
-
-import '../../../scidart_plot.dart';
+import 'package:scidart_plot/src/svg/svg.dart';
 
 SvgWidget grid({@required Array ax,
   @required Array ay,
@@ -17,6 +13,7 @@ SvgWidget grid({@required Array ax,
   @required frameGridStrokeColor,
   @required StrokeDasharray frameGridDasharray,
   @required frameAxisStrokeColor,
+  @required textAxisStrokeColor,
   @required grid,
   id = 'grid'}) {
   // main widgets list
@@ -101,7 +98,7 @@ SvgWidget grid({@required Array ax,
         widgets.add(Text(x: xPoint,
             y: yEnd + 20,
             text: truncate(ax[i], 4).toString().toString(),
-            fill: frameAxisStrokeColor,
+            fill: textAxisStrokeColor,
             textAnchor: TextAnchor.middle));
       }
     }
@@ -111,7 +108,7 @@ SvgWidget grid({@required Array ax,
       widgets.add(Text(x: xPoint,
           y: yEnd + 20,
           text: truncate(ax[i], 4).toString().toString(),
-          fill: frameAxisStrokeColor,
+          fill: textAxisStrokeColor,
           textAnchor: TextAnchor.middle));
     }
   }
@@ -125,7 +122,7 @@ SvgWidget grid({@required Array ax,
         widgets.add(Text(x: xStart - 10,
             y: yPoint,
             text: truncate(ay[i], 4).toString().toString(),
-            fill: frameAxisStrokeColor,
+            fill: textAxisStrokeColor,
             textAnchor: TextAnchor.end,
             alignmentY: AlignmentY.central));
       }
@@ -136,7 +133,7 @@ SvgWidget grid({@required Array ax,
       widgets.add(Text(x: xStart - 10,
           y: yPoint,
           text: truncate(ay[i], 4).toString().toString(),
-          fill: frameAxisStrokeColor,
+          fill: textAxisStrokeColor,
           textAnchor: TextAnchor.end,
           alignmentY: AlignmentY.central));
     }

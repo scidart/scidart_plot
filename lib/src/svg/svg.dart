@@ -1,6 +1,9 @@
 library svg;
 
+
 export './canvas/svg_canvas.dart';
+export './widgets/abstract/svg_widget.dart';
+export './widgets/abstract/unit_converter.dart';
 export './primitives/point_pair.dart';
 export 'enums/alignment_y.dart';
 export 'enums/color.dart';
