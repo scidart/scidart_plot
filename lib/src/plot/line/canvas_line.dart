@@ -4,22 +4,47 @@ import 'package:scidart_plot/src/plot/line/plot_line.dart';
 import 'package:scidart_plot/src/svg/canvas/svg_canvas.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
+import 'package:scidart_plot/src/svg/enums/font_size.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import '../../../scidart_plot.dart';
 import 'grid.dart';
 
-SvgCanvas canvasLine({@required Array ax,
-            @required List<PlotLine> lines,
-            double width = 414.0,
+SvgCanvas canvasLine({@required final Array ax,
+            @required final List<PlotLine> lines,
+            final double width = 414.0,
             double height = 288.0,
-            bool showGrid = true,
-            Color backgroundColor}) {
-  var frameMarginLeft = 60.0;
+            final bool showGrid = true,
+            final Color backgroundColor,
+            final String title}) {
+  // default margins
+  final frameMarginLeft = 60.0;
   var frameMarginTop = 10.0;
-  var frameMarginRight = 10.0;
-  var frameMarginButton = 30.0;
+  final frameMarginRight = 10.0;
+  final frameMarginButton = 30.0;
+
+  // adjustment to create plot title
+  var titleWidget;
+  if (title != null) {
+    final titleMargin = 30.0;
+    frameMarginTop += titleMargin;
+    height += titleMargin;
+    titleWidget = Text(x: width/2, y: titleMargin/2, text: title, fill: Color.black,
+        textAnchor: TextAnchor.middle, alignmentY: AlignmentY.central,
+        fontSize: FontSize.custom(25, Unit.px));
+  }
+
+  // create main canvas
+  var plot = SvgCanvas(
+      fill: backgroundColor,
+      width: width, height: height,
+      children: []);
+
+  // title creation, if exist
+  if (titleWidget != null) {
+    plot.children.add(titleWidget);
+  }
 
   // calculate the margin limits
   final xStart = frameMarginLeft;
@@ -66,13 +91,8 @@ SvgCanvas canvasLine({@required Array ax,
   }
   var linesGroup = Group(children: linesSvg, id: 'lines');
 
-  var plot = SvgCanvas(
-      fill: backgroundColor,
-      width: width, height: height,
-      children: [
-        plotGrid,
-        linesGroup
-      ]);
+  plot.children.add(plotGrid);
+  plot.children.add(linesGroup);
 
   return plot;
 }

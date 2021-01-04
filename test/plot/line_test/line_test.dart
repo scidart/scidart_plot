@@ -3,11 +3,11 @@ import 'package:scidart_plot/src/plot/plot.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 import 'package:test/test.dart';
 
-import '../helpers.dart';
+import '../../helpers.dart';
 
 void main() {
   const directory = './test_files/';
-  group('plot', () {
+  group('line plot', () {
     test('plot simple', () async {
       var N = 0.1;
       var n = linspace(0, N, num: 50, endpoint: false);
@@ -109,5 +109,17 @@ void main() {
     var plotExample = canvasLine(ax: n, backgroundColor: Color.white, lines: [line, line2, line3]);
 
     await saveSvg(plotExample, directory + 'plot3Lines2DashedBackground');
+  });
+
+  test('plot with title', () async {
+    var N = 0.1;
+    var n = linspace(0, N, num: 50, endpoint: false);
+    var f1 = 60.0;
+    var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+
+    var line = PlotLine(ay: sg);
+    var plotExample = canvasLine(ax: n, title: 'Test Plot', lines: [line]);
+
+    await saveSvg(plotExample, directory + 'plotWithTitle');
   });
 }

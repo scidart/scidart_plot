@@ -12,16 +12,16 @@
 	<line x1="60.0px" y1="158.8px" x2="50.0px" y2="158.8px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="109.2px" x2="50.0px" y2="109.2px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="59.6px" x2="50.0px" y2="59.6px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<text x="60.0px" y="278.0px" text-anchor="middle" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.0</text>
-	<text x="128.8px" y="278.0px" text-anchor="middle" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.02</text>
-	<text x="197.6px" y="278.0px" text-anchor="middle" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.04</text>
-	<text x="266.4px" y="278.0px" text-anchor="middle" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.06</text>
-	<text x="335.2px" y="278.0px" text-anchor="middle" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.08</text>
-	<text x="50.0px" y="258.0px" text-anchor="end" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.998</text>
-	<text x="50.0px" y="208.4px" text-anchor="end" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.5907</text>
-	<text x="50.0px" y="158.8px" text-anchor="end" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.1833</text>
-	<text x="50.0px" y="109.2px" text-anchor="end" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.224</text>
-	<text x="50.0px" y="59.6px" text-anchor="end" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.6314</text>
+	<text x="60.0px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.0</text>
+	<text x="128.8px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.02</text>
+	<text x="197.6px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.04</text>
+	<text x="266.4px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.06</text>
+	<text x="335.2px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.08</text>
+	<text x="50.0px" y="258.0px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.998</text>
+	<text x="50.0px" y="208.4px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.5907</text>
+	<text x="50.0px" y="158.8px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.1833</text>
+	<text x="50.0px" y="109.2px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.224</text>
+	<text x="50.0px" y="59.6px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.6314</text>
 	<line x1="128.8px" y1="10.0px" x2="128.8px" y2="258.0px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
 	<line x1="197.6px" y1="10.0px" x2="197.6px" y2="258.0px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
 	<line x1="266.4px" y1="10.0px" x2="266.4px" y2="258.0px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
