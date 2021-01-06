@@ -58,7 +58,7 @@ void main() {
       var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
 
       var line = PlotLine(ay: sg);
-      var line2 = PlotLine(ay: sg2, color: Color.blue);
+      var line2 = PlotLine(ay: sg2, stroke: Color.blue);
       var plotExample = canvasLine(ax: n, lines: [line, line2]);
 
       await saveSvg(plotExample, directory + 'plot2Lines');
@@ -72,7 +72,7 @@ void main() {
       var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
 
       var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5);
-      var line2 = PlotLine(ay: sg2, color: Color.hex('#0800ff'));
+      var line2 = PlotLine(ay: sg2, stroke: Color.hex('#0800ff'));
       var plotExample = canvasLine(ax: n, lines: [line, line2]);
 
       await saveSvg(plotExample, directory + 'plot2Lines1Dashed');
@@ -87,8 +87,8 @@ void main() {
       var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
       var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash20);
-      var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-      var line3 = PlotLine(ay: sg3, color: Color.orange);
+      var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+      var line3 = PlotLine(ay: sg3, stroke: Color.orange);
       var plotExample = canvasLine(ax: n, lines: [line, line2, line3]);
 
       await saveSvg(plotExample, directory + 'plot3Lines2Dashed');
@@ -104,8 +104,8 @@ void main() {
     var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
     var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
     var plotExample = canvasLine(ax: n, backgroundColor: Color.white, lines: [line, line2, line3]);
 
     await saveSvg(plotExample, directory + 'plot3Lines2DashedBackground');
@@ -132,8 +132,8 @@ void main() {
     var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
     var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
@@ -154,8 +154,8 @@ void main() {
     var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
     var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
@@ -176,8 +176,8 @@ void main() {
     var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
     var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
@@ -198,8 +198,8 @@ void main() {
     var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
     var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
@@ -220,8 +220,8 @@ void main() {
     var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
     var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
@@ -242,8 +242,8 @@ void main() {
     var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
     var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(ay: sg2, color: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, color: Color.orange);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('Bacon ipsum dolor amet meatloaf porchetta beef');
     var legend2 = LegendItem('line 2');
@@ -254,5 +254,28 @@ void main() {
         legend: Legend([legend1, legend2, legend3], LegendPosition.topRight));
 
     await saveSvg(plotExample, directory + 'plot3Lines2DashedLegendTopRightBigTextTitle');
+  });
+
+  test('plot 3 lines 2 dashed Legend top right big text title line filled', () async {
+    var N = 0.1;
+    var n = linspace(0, N, num: 1000, endpoint: false);
+    var f1 = 60.0;
+    var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
+    var sg2 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
+    var sg3 = arrayDivisionToScalar(arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
+
+    var line = PlotLine(ay: sg, stroke: Color.purple, strokeDasharray: StrokeDasharray.dash2, strokeWidth: StrokeWidth.width5, fill: Color.green);
+    var line2 = PlotLine(ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
+    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+
+    var legend1 = LegendItem('Bacon ipsum dolor amet meatloaf porchetta beef');
+    var legend2 = LegendItem('line 2');
+    var legend3 = LegendItem('line 3');
+
+    var plotExample = canvasLine(ax: n, lines: [line, line2, line3],
+        title: 'bresaola shankle rump cupim',
+        legend: Legend([legend1, legend2, legend3], LegendPosition.topRight));
+
+    await saveSvg(plotExample, directory + 'plot3Lines2DashedLegendTopRightBigTextTitleLineFilled');
   });
 }

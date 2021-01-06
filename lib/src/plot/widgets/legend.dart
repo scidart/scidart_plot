@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:scidart_plot/src/plot/line/plot_line.dart';
+import 'package:scidart_plot/src/plot/widgets/plot_base.dart';
 import 'package:scidart_plot/src/plot/widgets/legend_item.dart';
 import 'package:scidart_plot/src/plot/widgets/legend_position.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
@@ -13,7 +13,7 @@ class Legend {
 
   Legend(this.items, this.position, {this.backgroundColor, this.textColor});
 
-  SvgWidget generate(double xStart, double yStart, double xEnd, double yEnd, List<PlotLine> lines) {
+  SvgWidget generate(double xStart, double yStart, double xEnd, double yEnd, List<PlotBase> lines, {bool fillColor = false}) {
     const marginTop = 15.0;
     const marginLeft = 5.0;
     const marginRight = 5.0;
@@ -70,9 +70,16 @@ class Legend {
 
     // create legend items
     for (var i = 0; i < lines.length; i++) {
+      var color;
+      if (fillColor) {
+        color = lines[i].fill;
+      } else {
+        color = lines[i].stroke ?? lines[i].fill;
+      }
+
       g.children.add(items[i].generate(x + marginLeft,
           y + marginTop + (i * marginTop),
-          lines[i].color, textColor ?? Color.black,
+          color, textColor ?? Color.black,
           lineLength, marginLeftText));
     }
 

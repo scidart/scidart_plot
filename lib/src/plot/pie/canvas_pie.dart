@@ -13,6 +13,11 @@ SvgCanvas canvasPie({@required final Array series,
   final Legend legend,
   final Color axisTextColor,
 }) {
+  if (series.length != pies.length) {
+    throw FormatException('series and pies must have same length');
+  }
+
+  // margins
   var frameMarginTop = 0.0;
 
   // adjustment to create plot title
@@ -26,9 +31,11 @@ SvgCanvas canvasPie({@required final Array series,
         fontSize: FontSize.custom(25, Unit.px));
   }
 
-  // calculate the center
-  final xCenter = width/2;
-  final yCenter = frameMarginTop + ((height - frameMarginTop)/2);
+  // calculate the margin limits
+  final xStart = 0.0;
+  final xEnd = width;
+  final yStart = 0.0;
+  final yEnd = height;
 
   // create main canvas
   var plot = SvgCanvas(
@@ -36,7 +43,38 @@ SvgCanvas canvasPie({@required final Array series,
       width: width, height: height,
       children: []);
 
-  plot.children.add(Circle(cx: xCenter, cy: yCenter, r: 10, fill: Color.black));
+  // add title if necessary
+  if (titleWidget != null) {
+    plot.children.add(titleWidget);
+  }
+
+  // calculate the center
+  final xCenter = width/2;
+  final yCenter = frameMarginTop + ((height - frameMarginTop)/2);
+  final radius = min(width, height)/3;
+
+  // total
+  final total = arraySum(series);
+
+  // draw the pies
+  var previousEndAngle = 0.0;
+  for (var i = 0; i < series.length; i++) {
+    var percent = series[i] / total;
+    var percentAngle = percent * 360;
+
+    var startAngle = previousEndAngle;
+    var endAngle = previousEndAngle + percentAngle;
+    previousEndAngle = endAngle;
+
+    plot.children.add(
+      pies[i].generate(xCenter, yCenter, radius, startAngle, endAngle)
+    );
+  }
+
+  // add legend to the plot
+  if (legend != null) {
+    plot.children.add(legend.generate(xStart, yStart, xEnd, yEnd, pies, fillColor: true));
+  }
 
   return plot;
 }

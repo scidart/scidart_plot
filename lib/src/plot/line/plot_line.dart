@@ -1,22 +1,28 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
+import 'package:scidart_plot/src/plot/widgets/plot_base.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 
-class PlotLine {
+class PlotLine extends PlotBase {
   Array ay;
+
+  @override
   String id;
-  Color color;
+  @override
+  Color stroke;
+  @override
+  Color fill;
+  @override
+  StrokeWidth strokeWidth;
+  @override
   StrokeDasharray strokeDasharray;
 
-  PlotLine({@required Array ay,
-        Color color,
-    StrokeDasharray strokeDasharray,
-        id = 'plot_line'}) {
-      this.ay = ay;
-      this.id = id;
-      this.color = color ?? Color.hex('#ff0000');
-      this.strokeDasharray = strokeDasharray;
-  }
+  PlotLine({@required this.ay,
+        this.stroke,
+        this.fill,
+        this.strokeWidth,
+        this.strokeDasharray,
+        this.id = 'plot_line'});
 
   SvgWidget generate(Array ax, double xStart, double xEnd, double yStart, double yEnd,
       double distDeltaX, double yMin, double yMax) {
@@ -37,7 +43,11 @@ class PlotLine {
       var yPoint = yEnd + ((yEnd - yStart) * (yMin - ay[i]) / (yMax - yMin));
       points.add(PointPair(x: xPoint, y: yPoint));
     }
-    widgets.add(Polyline(points: points, stroke: color, strokeDasharray: strokeDasharray));
+
+    stroke ??= Color.hex('#ff0000');
+
+    widgets.add(Polyline(points: points, stroke: stroke,
+        fill: fill, strokeWidth:  strokeWidth, strokeDasharray: strokeDasharray));
 
     return Group(id: id, children: widgets);
   }

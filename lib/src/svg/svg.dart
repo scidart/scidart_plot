@@ -13,6 +13,7 @@ export 'enums/stroke_width.dart';
 export 'enums/text_anchor.dart';
 export 'enums/unit.dart';
 export 'enums/visibility.dart';
+export './widgets/arc.dart';
 export './widgets/circle.dart';
 export './widgets/ellipse.dart';
 export './widgets/group.dart';
