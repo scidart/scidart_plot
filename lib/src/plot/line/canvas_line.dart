@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 import '../plot.dart';
-import 'grid.dart';
+import 'grid_line.dart';
 
 SvgCanvas canvasLine({@required final Array ax,
             @required final List<PlotLine> lines,
@@ -69,7 +69,7 @@ SvgCanvas canvasLine({@required final Array ax,
   final lengthY = yEnd - yStart;
   final distDeltaY = lengthY / ay.length;
 
-  var plotGrid = grid(ax: ax,
+  var plotGrid = grid_line(ax: ax,
       ay: ay,
       xStart: xStart,
       xEnd: xEnd,

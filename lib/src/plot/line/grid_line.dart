@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 
-SvgWidget grid({@required Array ax,
+SvgWidget grid_line({@required Array ax,
   @required Array ay,
   @required double xStart,
   @required double xEnd,
