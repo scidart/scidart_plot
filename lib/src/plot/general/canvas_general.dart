@@ -1,12 +1,13 @@
 import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
+import 'package:scidart_plot/src/plot/general/plot_general.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 import '../plot.dart';
-import 'grid_line.dart';
+import 'grid_general.dart';
 
-SvgCanvas canvasLine({
+SvgCanvas canvasGeneral({
   @required final Array ax,
-  @required final List<PlotLine> lines,
+  @required final List<PlotGeneral> lines,
   final double width = 414.0,
   double height = 288.0,
   final bool showGrid = true,
@@ -73,7 +74,7 @@ SvgCanvas canvasLine({
   final lengthY = yEnd - yStart;
   final distDeltaY = lengthY / ay.length;
 
-  var plotGrid = grid_line(
+  var plotGrid = grid_general(
     ax: ax,
     ay: ay,
     xStart: xStart,
@@ -96,8 +97,8 @@ SvgCanvas canvasLine({
   }
   var linesGroup = Group(children: linesSvg, id: 'lines');
 
-  plot.children.add(plotGrid);
   plot.children.add(linesGroup);
+  plot.children.add(plotGrid);
 
   // add legend to the plot
   if (legend != null) {

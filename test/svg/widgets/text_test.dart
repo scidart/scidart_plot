@@ -1,6 +1,4 @@
 import 'package:scidart_plot/scidart_plot.dart';
-import 'package:scidart_plot/src/svg/enums/font_size.dart';
-import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:test/test.dart';
 
 import '../../helpers.dart';

@@ -1,6 +1,5 @@
 import 'package:scidart/numdart.dart';
-import 'package:scidart_plot/src/plot/plot.dart';
-import 'package:scidart_plot/src/svg/svg.dart';
+import 'package:scidart_plot/scidart_plot.dart';
 import 'package:test/test.dart';
 
 import '../../helpers.dart';

@@ -26,4 +26,8 @@ class StrokeWidth {
       return 'none';
     }
   }
+
+  double getValue() {
+    return _value ?? 0;
+  }
 }

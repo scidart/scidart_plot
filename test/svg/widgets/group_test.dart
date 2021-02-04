@@ -1,5 +1,4 @@
 import 'package:scidart_plot/scidart_plot.dart';
-import 'package:scidart_plot/src/svg/widgets/group.dart';
 import 'package:test/test.dart';
 
 import '../../helpers.dart';

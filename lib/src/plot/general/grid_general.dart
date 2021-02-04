@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 
-SvgWidget grid_line(
+SvgWidget grid_general(
     {@required Array ax,
     @required Array ay,
     @required double xStart,
@@ -21,8 +21,13 @@ SvgWidget grid_line(
   var widgets = <SvgWidget>[];
 
   // draw X axis
+  var yMiddle = yStart + ((yEnd - yStart) / 2);
   widgets.add(Line(
-      x1: xStart, y1: yEnd, x2: xEnd, y2: yEnd, stroke: frameAxisStrokeColor));
+      x1: xStart,
+      y1: yMiddle,
+      x2: xEnd,
+      y2: yMiddle,
+      stroke: frameAxisStrokeColor));
 
   // draw Y axis
   widgets.add(Line(
@@ -39,9 +44,9 @@ SvgWidget grid_line(
         var xPoint = calcXPoint(xStart, i, distDeltaX);
         widgets.add(Line(
             x1: xPoint,
-            y1: yEnd,
+            y1: yMiddle,
             x2: xPoint,
-            y2: yEnd + 10,
+            y2: yMiddle + 10,
             stroke: frameAxisStrokeColor));
       }
     }
@@ -50,9 +55,9 @@ SvgWidget grid_line(
       var xPoint = calcXPoint(xStart, i, distDeltaX);
       widgets.add(Line(
           x1: xPoint,
-          y1: yEnd,
+          y1: yMiddle,
           x2: xPoint,
-          y2: yEnd + 10,
+          y2: yMiddle + 10,
           stroke: frameAxisStrokeColor));
     }
   }
@@ -90,7 +95,7 @@ SvgWidget grid_line(
         var xPoint = calcXPoint(xStart, i, distDeltaX);
         widgets.add(Text(
             x: xPoint,
-            y: yEnd + 20,
+            y: yMiddle + 20,
             text: truncate(ax[i], 4).toString().toString(),
             fill: textAxisStrokeColor,
             textAnchor: TextAnchor.middle));
@@ -101,7 +106,7 @@ SvgWidget grid_line(
       var xPoint = calcXPoint(xStart, i, distDeltaX);
       widgets.add(Text(
           x: xPoint,
-          y: yEnd + 20,
+          y: yMiddle + 20,
           text: truncate(ax[i], 4).toString().toString(),
           fill: textAxisStrokeColor,
           textAnchor: TextAnchor.middle));
@@ -201,8 +206,10 @@ SvgWidget grid_line(
 bool _deltaXSmallRule(int i, double delta) {
   if (delta < 1.0) {
     return i % 100 == 0;
+  } else if (delta < 2.5) {
+    return i % 50 == 0;
   } else if (delta < 5.0) {
-    return i % 10 == 0;
+    return i % 20 == 0;
   } else {
     return i % 10 == 0;
   }

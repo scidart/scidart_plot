@@ -1,6 +1,5 @@
 import 'package:scidart/numdart.dart';
-import 'package:scidart_plot/src/plot/plot.dart';
-import 'package:scidart_plot/src/svg/svg.dart';
+import 'package:scidart_plot/scidart_plot.dart';
 import 'package:test/test.dart';
 
 import '../../helpers.dart';
@@ -18,8 +17,8 @@ void main() {
       //https://css-tricks.com/how-to-make-charts-with-svg/
       //https://google.github.io/charts/flutter/example/line_charts/simple
 
-      var line = PlotLine(ay: sg);
-      var plotExample = canvasLine(ax: n, lines: [line]);
+      var line = PlotGeneral(ay: sg);
+      var plotExample = canvasGeneral(ax: n, lines: [line]);
 
       await saveSvg(plotExample, directory + 'plotSimple');
     });
@@ -31,8 +30,8 @@ void main() {
       var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
       print(sg);
 
-      var line = PlotLine(ay: sg);
-      var plotExample = canvasLine(ax: n, lines: [line]);
+      var line = PlotGeneral(ay: sg);
+      var plotExample = canvasGeneral(ax: n, lines: [line]);
 
       await saveSvg(plotExample, directory + 'plotSmallSet');
     });
@@ -44,8 +43,8 @@ void main() {
       var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
       print(sg);
 
-      var line = PlotLine(ay: sg);
-      var plotExample = canvasLine(ax: n, lines: [line]);
+      var line = PlotGeneral(ay: sg);
+      var plotExample = canvasGeneral(ax: n, lines: [line]);
 
       await saveSvg(plotExample, directory + 'plotBigSet');
     });
@@ -58,9 +57,9 @@ void main() {
       var sg2 = arrayDivisionToScalar(
           arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
 
-      var line = PlotLine(ay: sg);
-      var line2 = PlotLine(ay: sg2, stroke: Color.blue);
-      var plotExample = canvasLine(ax: n, lines: [line, line2]);
+      var line = PlotGeneral(ay: sg);
+      var line2 = PlotGeneral(ay: sg2, stroke: Color.blue);
+      var plotExample = canvasGeneral(ax: n, lines: [line, line2]);
 
       await saveSvg(plotExample, directory + 'plot2Lines');
     });
@@ -73,9 +72,9 @@ void main() {
       var sg2 = arrayDivisionToScalar(
           arraySin(arrayMultiplyToScalar(n, 2 * pi * f1)), 2);
 
-      var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5);
-      var line2 = PlotLine(ay: sg2, stroke: Color.hex('#0800ff'));
-      var plotExample = canvasLine(ax: n, lines: [line, line2]);
+      var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5);
+      var line2 = PlotGeneral(ay: sg2, stroke: Color.hex('#0800ff'));
+      var plotExample = canvasGeneral(ax: n, lines: [line, line2]);
 
       await saveSvg(plotExample, directory + 'plot2Lines1Dashed');
     });
@@ -90,11 +89,11 @@ void main() {
       var sg3 = arrayDivisionToScalar(
           arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-      var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash20);
-      var line2 = PlotLine(
+      var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash20);
+      var line2 = PlotGeneral(
           ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-      var line3 = PlotLine(ay: sg3, stroke: Color.orange);
-      var plotExample = canvasLine(ax: n, lines: [line, line2, line3]);
+      var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
+      var plotExample = canvasGeneral(ax: n, lines: [line, line2, line3]);
 
       await saveSvg(plotExample, directory + 'plot3Lines2Dashed');
     });
@@ -110,11 +109,11 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(
+    var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
-    var plotExample = canvasLine(
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
+    var plotExample = canvasGeneral(
         ax: n, backgroundColor: Color.white, lines: [line, line2, line3]);
 
     await saveSvg(plotExample, directory + 'plot3Lines2DashedBackground');
@@ -126,8 +125,8 @@ void main() {
     var f1 = 60.0;
     var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
 
-    var line = PlotLine(ay: sg);
-    var plotExample = canvasLine(ax: n, title: 'Test Plot', lines: [line]);
+    var line = PlotGeneral(ay: sg);
+    var plotExample = canvasGeneral(ax: n, title: 'Test Plot', lines: [line]);
 
     await saveSvg(plotExample, directory + 'plotWithTitle');
   });
@@ -142,16 +141,16 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(
+    var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
     var legend3 = LegendItem('line 3');
 
-    var plotExample = canvasLine(
+    var plotExample = canvasGeneral(
         ax: n,
         lines: [line, line2, line3],
         legend: Legend([legend1, legend2, legend3], LegendPosition.topLeft));
@@ -169,16 +168,16 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(
+    var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
     var legend3 = LegendItem('line 3');
 
-    var plotExample = canvasLine(
+    var plotExample = canvasGeneral(
         ax: n,
         lines: [line, line2, line3],
         legend: Legend([legend1, legend2, legend3], LegendPosition.topRight));
@@ -196,16 +195,16 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(
+    var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
     var legend3 = LegendItem('line 3');
 
-    var plotExample = canvasLine(
+    var plotExample = canvasGeneral(
         ax: n,
         lines: [line, line2, line3],
         legend: Legend([legend1, legend2, legend3], LegendPosition.bottomLeft));
@@ -223,16 +222,16 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(
+    var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
     var legend3 = LegendItem('line 3');
 
-    var plotExample = canvasLine(
+    var plotExample = canvasGeneral(
         ax: n,
         lines: [line, line2, line3],
         legend:
@@ -252,16 +251,16 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(
+    var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('line 1');
     var legend2 = LegendItem('line 2');
     var legend3 = LegendItem('line 3');
 
-    var plotExample = canvasLine(
+    var plotExample = canvasGeneral(
         ax: n,
         lines: [line, line2, line3],
         legend: Legend([legend1, legend2, legend3], LegendPosition.center));
@@ -279,16 +278,16 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
-    var line2 = PlotLine(
+    var line = PlotGeneral(ay: sg, strokeDasharray: StrokeDasharray.dash5dash1);
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('Bacon ipsum dolor amet meatloaf porchetta beef');
     var legend2 = LegendItem('line 2');
     var legend3 = LegendItem('line 3');
 
-    var plotExample = canvasLine(
+    var plotExample = canvasGeneral(
         ax: n,
         lines: [line, line2, line3],
         title: 'bresaola shankle rump cupim',
@@ -309,21 +308,21 @@ void main() {
     var sg3 = arrayDivisionToScalar(
         arraySin(arrayMultiplyToScalar(n, 2 * pi * f1 * 2)), 2);
 
-    var line = PlotLine(
+    var line = PlotGeneral(
         ay: sg,
         stroke: Color.purple,
         strokeDasharray: StrokeDasharray.dash2,
         strokeWidth: StrokeWidth.width5,
         fill: Color.green);
-    var line2 = PlotLine(
+    var line2 = PlotGeneral(
         ay: sg2, stroke: Color.blue, strokeDasharray: StrokeDasharray.dash5);
-    var line3 = PlotLine(ay: sg3, stroke: Color.orange);
+    var line3 = PlotGeneral(ay: sg3, stroke: Color.orange);
 
     var legend1 = LegendItem('Bacon ipsum dolor amet meatloaf porchetta beef');
     var legend2 = LegendItem('line 2');
     var legend3 = LegendItem('line 3');
 
-    var plotExample = canvasLine(
+    var plotExample = canvasGeneral(
         ax: n,
         lines: [line, line2, line3],
         title: 'bresaola shankle rump cupim',

@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg width="414.0" height="288.0" xmlns="http://www.w3.org/2000/svg">
-	<g id="grid" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<line x1="60.0px" y1="258.0px" x2="404.0px" y2="258.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<g id="lines" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<g id="plot_line" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<polyline points="60.0,134.0 66.9,48.9 73.8,10.0 80.6,38.3 87.5,118.4 94.4,207.0 101.3,256.0 108.2,238.9 115.0,164.9 121.9,74.1 128.8,15.8 135.7,21.6 142.6,88.3 149.4,179.7 156.3,246.4 163.2,252.2 170.1,193.9 177.0,103.1 183.8,29.1 190.7,12.0 197.6,61.0 204.5,149.6 211.4,229.7 218.2,258.0 225.1,219.1 232.0,134.0 238.9,48.9 245.8,10.0 252.6,38.3 259.5,118.4 266.4,207.0 273.3,256.0 280.2,238.9 287.0,164.9 293.9,74.1 300.8,15.8 307.7,21.6 314.6,88.3 321.4,179.7 328.3,246.4 335.2,252.2 342.1,193.9 349.0,103.1 355.8,29.1 362.7,12.0 369.6,61.0 376.5,149.6 383.4,229.7 390.2,258.0 397.1,219.1 " id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+</g>
+</g>
+	<g id="grid" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<line x1="60.0px" y1="134.0px" x2="404.0px" y2="134.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="10.0px" x2="60.0px" y2="258.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<line x1="60.0px" y1="258.0px" x2="60.0px" y2="268.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<line x1="128.8px" y1="258.0px" x2="128.8px" y2="268.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<line x1="197.6px" y1="258.0px" x2="197.6px" y2="268.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<line x1="266.4px" y1="258.0px" x2="266.4px" y2="268.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<line x1="335.2px" y1="258.0px" x2="335.2px" y2="268.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0px" y1="134.0px" x2="60.0px" y2="144.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="128.8px" y1="134.0px" x2="128.8px" y2="144.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="197.6px" y1="134.0px" x2="197.6px" y2="144.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="266.4px" y1="134.0px" x2="266.4px" y2="144.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="335.2px" y1="134.0px" x2="335.2px" y2="144.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="258.0px" x2="50.0px" y2="258.0px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="208.4px" x2="50.0px" y2="208.4px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="158.8px" x2="50.0px" y2="158.8px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="109.2px" x2="50.0px" y2="109.2px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="59.6px" x2="50.0px" y2="59.6px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-	<text x="60.0px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.0</text>
-	<text x="128.8px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.02</text>
-	<text x="197.6px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.04</text>
-	<text x="266.4px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.06</text>
-	<text x="335.2px" y="278.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.08</text>
+	<text x="60.0px" y="154.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.0</text>
+	<text x="128.8px" y="154.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.02</text>
+	<text x="197.6px" y="154.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.04</text>
+	<text x="266.4px" y="154.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.06</text>
+	<text x="335.2px" y="154.0px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.08</text>
 	<text x="50.0px" y="258.0px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.998</text>
 	<text x="50.0px" y="208.4px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.5907</text>
 	<text x="50.0px" y="158.8px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.1833</text>
@@ -30,8 +33,5 @@
 	<line x1="60.0px" y1="158.8px" x2="404.0px" y2="158.8px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="109.2px" x2="404.0px" y2="109.2px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
 	<line x1="60.0px" y1="59.6px" x2="404.0px" y2="59.6px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
-</g>
-	<g id="lines" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<g id="plot_line" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<polyline points="60.0,134.0 66.9,48.9 73.8,10.0 80.6,38.3 87.5,118.4 94.4,207.0 101.3,256.0 108.2,238.9 115.0,164.9 121.9,74.1 128.8,15.8 135.7,21.6 142.6,88.3 149.4,179.7 156.3,246.4 163.2,252.2 170.1,193.9 177.0,103.1 183.8,29.1 190.7,12.0 197.6,61.0 204.5,149.6 211.4,229.7 218.2,258.0 225.1,219.1 232.0,134.0 238.9,48.9 245.8,10.0 252.6,38.3 259.5,118.4 266.4,207.0 273.3,256.0 280.2,238.9 287.0,164.9 293.9,74.1 300.8,15.8 307.7,21.6 314.6,88.3 321.4,179.7 328.3,246.4 335.2,252.2 342.1,193.9 349.0,103.1 355.8,29.1 362.7,12.0 369.6,61.0 376.5,149.6 383.4,229.7 390.2,258.0 397.1,219.1 " id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
-</g>
 </g>
 </svg>
