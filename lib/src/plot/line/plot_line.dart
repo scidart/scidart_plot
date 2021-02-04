@@ -17,15 +17,16 @@ class PlotLine extends PlotBase {
   @override
   StrokeDasharray strokeDasharray;
 
-  PlotLine({@required this.ay,
-        this.stroke,
-        this.fill,
-        this.strokeWidth,
-        this.strokeDasharray,
-        this.id = 'plot_line'});
+  PlotLine(
+      {@required this.ay,
+      this.stroke,
+      this.fill,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.id = 'plot_line'});
 
-  SvgWidget generate(Array ax, double xStart, double xEnd, double yStart, double yEnd,
-      double distDeltaX, double yMin, double yMax) {
+  SvgWidget generate(Array ax, double xStart, double xEnd, double yStart,
+      double yEnd, double distDeltaX, double yMin, double yMax) {
     if (ax.length != ay.length) {
       throw FormatException('expected ax and ay to have same length');
     }
@@ -34,7 +35,7 @@ class PlotLine extends PlotBase {
     var widgets = <SvgWidget>[];
 
     var points = <PointPair>[];
-    for(var i = 0; i < ax.length; i++) {
+    for (var i = 0; i < ax.length; i++) {
       var xPoint = calcXPoint(xStart, i, distDeltaX);
       // http://www.pstcc.edu/nbs/WebPhysics/Chapter12.htm
       // (- yEnd + yPoint) / (yEnd - yStart) = (yMin - ay[i]) / (yMax - yMin)
@@ -46,8 +47,12 @@ class PlotLine extends PlotBase {
 
     stroke ??= Color.hex('#ff0000');
 
-    widgets.add(Polyline(points: points, stroke: stroke,
-        fill: fill, strokeWidth:  strokeWidth, strokeDasharray: strokeDasharray));
+    widgets.add(Polyline(
+        points: points,
+        stroke: stroke,
+        fill: fill,
+        strokeWidth: strokeWidth,
+        strokeDasharray: strokeDasharray));
 
     return Group(id: id, children: widgets);
   }

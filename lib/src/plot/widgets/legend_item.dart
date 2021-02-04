@@ -9,8 +9,13 @@ class LegendItem {
       double lineLength, double marginLeftText) {
     return Group(id: 'legend item', children: [
       Line(x1: x, y1: y, x2: x + lineLength, y2: y, stroke: lineColor),
-      Text(x: x + lineLength + marginLeftText, y: y, text: name, fill: textColor,
-          alignmentY: AlignmentY.central, textAnchor: TextAnchor.start)
+      Text(
+          x: x + lineLength + marginLeftText,
+          y: y,
+          text: name,
+          fill: textColor,
+          alignmentY: AlignmentY.central,
+          textAnchor: TextAnchor.start)
     ]);
   }
 }

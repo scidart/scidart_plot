@@ -46,15 +46,15 @@ class Polygon implements SvgWidget {
   /// [visibility] visibility of the element, default is inherit
   Polygon(
       {@required this.points,
-        this.id,
+      this.id,
       this.fill,
       this.stroke,
       this.strokeWidth,
-        this.strokeDasharray,
-        this.style,
-        this.transform,
-        this.unit,
-        this.visibility = Visibility.inherit});
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
@@ -62,16 +62,7 @@ class Polygon implements SvgWidget {
     points.forEach((p) => pointsXML += p.toXML() + ' ');
 
     var xml = '<polygon points="${pointsXML}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

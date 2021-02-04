@@ -14,12 +14,25 @@ class PlotPie extends PlotBase {
   @override
   StrokeDasharray strokeDasharray;
 
-  PlotPie({@required this.fill, this.stroke, this.strokeWidth, this.strokeDasharray, this.id = 'plot_pie'});
+  PlotPie(
+      {@required this.fill,
+      this.stroke,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.id = 'plot_pie'});
 
   SvgWidget generate(double xCenter, double yCenter, double radius,
       double startAngle, double endAngle) {
-    return Arc(id: id, cx: xCenter, cy: yCenter, r: radius,
-        startAngle: startAngle, endAngle: endAngle,
-        stroke: stroke, fill: fill, strokeWidth: strokeWidth, strokeDasharray: strokeDasharray);
+    return Arc(
+        id: id,
+        cx: xCenter,
+        cy: yCenter,
+        r: radius,
+        startAngle: startAngle,
+        endAngle: endAngle,
+        stroke: stroke,
+        fill: fill,
+        strokeWidth: strokeWidth,
+        strokeDasharray: strokeDasharray);
   }
 }

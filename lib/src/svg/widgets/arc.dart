@@ -48,23 +48,24 @@ class Arc implements SvgWidget {
   @override
   Visibility visibility;
 
-  Arc({@required this.cx,
-    @required this.cy,
-    @required this.r,
-    @required this.startAngle,
-    @required this.endAngle,
-    this.id,
-    this.fill,
-    this.stroke,
-    this.strokeWidth,
-    this.strokeDasharray,
-    this.style,
-    this.transform,
-    this.unit,
-    this.visibility = Visibility.inherit});
+  Arc(
+      {@required this.cx,
+      @required this.cy,
+      @required this.r,
+      @required this.startAngle,
+      @required this.endAngle,
+      this.id,
+      this.fill,
+      this.stroke,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   List<double> _polarToCartesian(centerX, centerY, radius, angleInDegrees) {
-    final angleInRadians = (angleInDegrees-90) * pi / 180.0;
+    final angleInRadians = (angleInDegrees - 90) * pi / 180.0;
     final x = centerX + (radius * cos(angleInRadians));
     final y = centerY + (radius * sin(angleInRadians));
     return [x, y];
@@ -82,16 +83,7 @@ class Arc implements SvgWidget {
 
     final largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';
 
-    return '<path ${attributes(
-          id,
-          fill,
-          stroke,
-          strokeWidth,
-          strokeDasharray,
-          style,
-          transform,
-          unit,
-          visibility)} '
+    return '<path ${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} '
         'd="M ${roundPixelsOnly(startX)} ${roundPixelsOnly(startY)} '
         'A ${roundPixelsOnly(r)} ${roundPixelsOnly(r)} 0 ${largeArcFlag} 0 ${endX} ${endY} '
         'L ${roundPixelsOnly(cx)} ${roundPixelsOnly(cy)}"/>';

@@ -4,7 +4,8 @@ import 'package:scidart_plot/src/plot/pie/plot_pie.dart';
 import 'package:scidart_plot/src/plot/widgets/legend.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 
-SvgCanvas canvasPie({@required final Array series,
+SvgCanvas canvasPie({
+  @required final Array series,
   @required final List<PlotPie> pies,
   final double width = 414.0,
   double height = 288.0,
@@ -26,8 +27,13 @@ SvgCanvas canvasPie({@required final Array series,
     final titleMargin = 30.0;
     frameMarginTop += titleMargin;
     height += titleMargin;
-    titleWidget = Text(x: width/2, y: titleMargin/2, text: title, fill: Color.black,
-        textAnchor: TextAnchor.middle, alignmentY: AlignmentY.central,
+    titleWidget = Text(
+        x: width / 2,
+        y: titleMargin / 2,
+        text: title,
+        fill: Color.black,
+        textAnchor: TextAnchor.middle,
+        alignmentY: AlignmentY.central,
         fontSize: FontSize.custom(25, Unit.px));
   }
 
@@ -39,9 +45,7 @@ SvgCanvas canvasPie({@required final Array series,
 
   // create main canvas
   var plot = SvgCanvas(
-      fill: backgroundColor,
-      width: width, height: height,
-      children: []);
+      fill: backgroundColor, width: width, height: height, children: []);
 
   // add title if necessary
   if (titleWidget != null) {
@@ -49,9 +53,9 @@ SvgCanvas canvasPie({@required final Array series,
   }
 
   // calculate the center
-  final xCenter = width/2;
-  final yCenter = frameMarginTop + ((height - frameMarginTop)/2);
-  final radius = min(width, height)/3;
+  final xCenter = width / 2;
+  final yCenter = frameMarginTop + ((height - frameMarginTop) / 2);
+  final radius = min(width, height) / 3;
 
   // total
   final total = arraySum(series);
@@ -66,14 +70,14 @@ SvgCanvas canvasPie({@required final Array series,
     var endAngle = previousEndAngle + percentAngle;
     previousEndAngle = endAngle;
 
-    plot.children.add(
-      pies[i].generate(xCenter, yCenter, radius, startAngle, endAngle)
-    );
+    plot.children
+        .add(pies[i].generate(xCenter, yCenter, radius, startAngle, endAngle));
   }
 
   // add legend to the plot
   if (legend != null) {
-    plot.children.add(legend.generate(xStart, yStart, xEnd, yEnd, pies, fillColor: true));
+    plot.children.add(
+        legend.generate(xStart, yStart, xEnd, yEnd, pies, fillColor: true));
   }
 
   return plot;

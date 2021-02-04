@@ -19,14 +19,20 @@ class SvgCanvas {
   /// [height] height of SVG
   /// [children] three with SVG elements
   SvgCanvas(
-      {@required this.width, @required this.height, @required this.children, this.fill});
+      {@required this.width,
+      @required this.height,
+      @required this.children,
+      this.fill});
 
   /// Convert the Svg structure to XML string
   String toXML() {
     var xml = '<?xml version="1.0" encoding="UTF-8" ?>\n'
         '<svg width="${roundPixelsOnly(width)}" height="${roundPixelsOnly(height)}" xmlns="${_xmlns}">\n';
     if (fill != null) {
-      children.insert(0, Rect(x: 0, y: 0, width: 100, height: 100, unit: Unit.per, fill: fill));
+      children.insert(
+          0,
+          Rect(
+              x: 0, y: 0, width: 100, height: 100, unit: Unit.per, fill: fill));
     }
     for (var c in children) {
       xml += '\t' + c.toXML() + '\n';

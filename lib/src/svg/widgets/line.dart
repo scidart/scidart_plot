@@ -51,33 +51,26 @@ class Line implements SvgWidget {
   /// [transform] custom css transformation
   /// [unit] unit used in the parameters, default is px (pixel)]
   /// [visibility] visibility of the element, default is inherit
-  Line({@required this.x1,
-    @required this.y1,
-    @required this.x2,
-    @required this.y2,
-    this.id,
-    this.stroke,
-    this.strokeWidth,
-    this.strokeDasharray,
-    this.style,
-    this.transform,
-    this.unit,
-    this.visibility = Visibility.inherit});
+  Line(
+      {@required this.x1,
+      @required this.y1,
+      @required this.x2,
+      @required this.y2,
+      this.id,
+      this.stroke,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    var xml = '<line x1="${roundPixels(x1, unit)}" y1="${roundPixels(y1, unit)}" '
+    var xml =
+        '<line x1="${roundPixels(x1, unit)}" y1="${roundPixels(y1, unit)}" '
         'x2="${roundPixels(x2, unit)}" y2="${roundPixels(y2, unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

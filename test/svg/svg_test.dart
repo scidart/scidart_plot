@@ -10,10 +10,7 @@ void main() {
     test('Create a simple svg', () async {
       var svg = SvgCanvas(height: 100, width: 100, children: [
         Circle(cx: 10, cy: 10, r: 5, stroke: Color.chocolate),
-        Text(x: 5,
-            y: 30,
-            text: 'some text to test',
-            fill: Color.blueviolet),
+        Text(x: 5, y: 30, text: 'some text to test', fill: Color.blueviolet),
         Polyline(points: [
           PointPair(x: 0, y: 0),
           PointPair(x: 100, y: 0),
@@ -29,10 +26,7 @@ void main() {
     test('Create a svg with background color', () async {
       var svg = SvgCanvas(height: 100, width: 100, fill: Color.gray, children: [
         Circle(cx: 10, cy: 10, r: 5, stroke: Color.chocolate),
-        Text(x: 5,
-            y: 30,
-            text: 'some text to test',
-            fill: Color.blueviolet),
+        Text(x: 5, y: 30, text: 'some text to test', fill: Color.blueviolet),
         Polyline(points: [
           PointPair(x: 0, y: 0),
           PointPair(x: 100, y: 0),

@@ -1,6 +1,5 @@
 library svg;
 
-
 export './canvas/svg_canvas.dart';
 export './widgets/abstract/svg_widget.dart';
 export './widgets/abstract/unit_converter.dart';

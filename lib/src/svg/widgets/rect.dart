@@ -50,34 +50,26 @@ class Rect implements SvgWidget {
   /// [transform] custom css transformation
   /// [unit] unit used in the parameters, default is px (pixel)
   /// [visibility] visibility of the element, default is inherit
-  Rect({@required this.x,
-    @required this.y,
-    @required this.width,
-    @required this.height,
-    this.id,
-    this.fill,
-    this.stroke,
-    this.strokeWidth,
-    this.strokeDasharray,
-    this.style,
-    this.transform,
-    this.unit,
-    this.visibility = Visibility.inherit});
+  Rect(
+      {@required this.x,
+      @required this.y,
+      @required this.width,
+      @required this.height,
+      this.id,
+      this.fill,
+      this.stroke,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
     var xml = '<rect x="${roundPixels(x, unit)}" y="${roundPixels(y, unit)}" '
         'width="${roundPixels(width, unit)}" height="${roundPixels(height, unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

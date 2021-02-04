@@ -48,33 +48,26 @@ class Circle implements SvgWidget {
   /// [transform] custom css transformation
   /// [unit] unit used in the parameters, default is px (pixel)
   /// [visibility] visibility of the element, default is inherit
-  Circle({@required this.cx,
-    @required this.cy,
-    @required this.r,
-    this.id,
-    this.fill,
-    this.stroke,
-    this.strokeWidth,
-    this.strokeDasharray,
-    this.style,
-    this.transform,
-    this.unit,
-    this.visibility = Visibility.inherit});
+  Circle(
+      {@required this.cx,
+      @required this.cy,
+      @required this.r,
+      this.id,
+      this.fill,
+      this.stroke,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    var xml = '<circle cx="${roundPixels(cx, unit)}" cy="${roundPixels(cy, unit)}" '
+    var xml =
+        '<circle cx="${roundPixels(cx, unit)}" cy="${roundPixels(cy, unit)}" '
         'r="${roundPixels(r, unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

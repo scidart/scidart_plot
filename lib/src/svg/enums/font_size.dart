@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 

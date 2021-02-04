@@ -1,1 +1,1 @@
-enum LegendPosition {topLeft, topRight, bottomLeft, bottomRight, center}
+enum LegendPosition { topLeft, topRight, bottomLeft, bottomRight, center }

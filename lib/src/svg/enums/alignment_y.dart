@@ -1,4 +1,4 @@
-enum AlignmentY { top, central, bottom}
+enum AlignmentY { top, central, bottom }
 
 extension AlignmentYExt on AlignmentY {
   String get xmlValue {

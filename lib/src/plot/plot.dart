@@ -1,7 +1,5 @@
 library plot;
 
-export './bar/canvas_bar.dart';
-export './bar/plot_bar.dart';
 export './line/canvas_line.dart';
 export './line/plot_line.dart';
 export './pie/canvas_pie.dart';

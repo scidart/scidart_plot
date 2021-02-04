@@ -13,7 +13,9 @@ class Legend {
 
   Legend(this.items, this.position, {this.backgroundColor, this.textColor});
 
-  SvgWidget generate(double xStart, double yStart, double xEnd, double yEnd, List<PlotBase> lines, {bool fillColor = false}) {
+  SvgWidget generate(double xStart, double yStart, double xEnd, double yEnd,
+      List<PlotBase> lines,
+      {bool fillColor = false}) {
     const marginTop = 15.0;
     const marginLeft = 5.0;
     const marginRight = 5.0;
@@ -28,12 +30,13 @@ class Legend {
     final textLength = textLetterLength * maxLengthString;
 
     const marginLeftText = 5.0;
-    final legendWidth = marginLeftText + lineLength + marginLeftText + textLength + marginRight;
+    final legendWidth =
+        marginLeftText + lineLength + marginLeftText + textLength + marginRight;
     final legendHeight = marginTop + marginTop * lines.length;
 
     // calculate x and y positions
     double x, y;
-    switch(position) {
+    switch (position) {
       case LegendPosition.topLeft:
         x = xStart;
         y = yStart;
@@ -51,19 +54,22 @@ class Legend {
         y = yEnd - legendHeight;
         break;
       case LegendPosition.center:
-        x = xStart + ((xEnd - xStart)/2) - (legendWidth/2);
-        y = yStart + ((yEnd-yStart)/2) - (legendHeight/2);
+        x = xStart + ((xEnd - xStart) / 2) - (legendWidth / 2);
+        y = yStart + ((yEnd - yStart) / 2) - (legendHeight / 2);
         break;
     }
 
     if (lines.length != items.length) {
-      throw FormatException('expected legendItems and lines to have the same length');
+      throw FormatException(
+          'expected legendItems and lines to have the same length');
     }
 
     var g = Group(id: 'legend', children: []);
 
     // create legend square
-    g.children.add(Rect(x: x, y: y,
+    g.children.add(Rect(
+        x: x,
+        y: y,
         width: legendWidth,
         height: legendHeight,
         fill: backgroundColor ?? Color.white));
@@ -77,10 +83,13 @@ class Legend {
         color = lines[i].stroke ?? lines[i].fill;
       }
 
-      g.children.add(items[i].generate(x + marginLeft,
+      g.children.add(items[i].generate(
+          x + marginLeft,
           y + marginTop + (i * marginTop),
-          color, textColor ?? Color.black,
-          lineLength, marginLeftText));
+          color,
+          textColor ?? Color.black,
+          lineLength,
+          marginLeftText));
     }
 
     return g;

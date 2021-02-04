@@ -77,16 +77,7 @@ class Text implements SvgWidget {
         'text-anchor="${textAnchor.xmlValue}" '
         'font-size="${FontSize.toXml(fontSize)}" '
         'dy="${alignmentY.xmlValue}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} >'
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} >'
         '${text}'
         '</text>';
     return xml;

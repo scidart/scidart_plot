@@ -55,30 +55,22 @@ class Ellipse implements SvgWidget {
       @required this.cy,
       @required this.rx,
       @required this.ry,
-        this.id,
+      this.id,
       this.fill,
       this.stroke,
       this.strokeWidth,
-        this.strokeDasharray,
-        this.style,
-        this.transform,
-        this.unit,
-        this.visibility = Visibility.inherit});
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    var xml = '<ellipse cx="${roundPixels(cx, unit)}" cy="${roundPixels(cx, unit)}" '
+    var xml =
+        '<ellipse cx="${roundPixels(cx, unit)}" cy="${roundPixels(cx, unit)}" '
         'rx="${roundPixels(rx, unit)}" ry="${roundPixels(ry, unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

@@ -4,18 +4,19 @@ import 'package:scidart_plot/src/svg/svg.dart';
 import '../plot.dart';
 import 'grid_line.dart';
 
-SvgCanvas canvasLine({@required final Array ax,
-            @required final List<PlotLine> lines,
-            final double width = 414.0,
-            double height = 288.0,
-            final bool showGrid = true,
-            final Color backgroundColor,
-            final String title,
-            final Legend legend,
-            final Color gridColor,
-            final Color axisColor,
-            final Color axisTextColor,
-            }) {
+SvgCanvas canvasLine({
+  @required final Array ax,
+  @required final List<PlotLine> lines,
+  final double width = 414.0,
+  double height = 288.0,
+  final bool showGrid = true,
+  final Color backgroundColor,
+  final String title,
+  final Legend legend,
+  final Color gridColor,
+  final Color axisColor,
+  final Color axisTextColor,
+}) {
   // default margins
   final frameMarginLeft = 60.0;
   var frameMarginTop = 10.0;
@@ -28,16 +29,19 @@ SvgCanvas canvasLine({@required final Array ax,
     final titleMargin = 30.0;
     frameMarginTop += titleMargin;
     height += titleMargin;
-    titleWidget = Text(x: width/2, y: titleMargin/2, text: title, fill: Color.black,
-        textAnchor: TextAnchor.middle, alignmentY: AlignmentY.central,
+    titleWidget = Text(
+        x: width / 2,
+        y: titleMargin / 2,
+        text: title,
+        fill: Color.black,
+        textAnchor: TextAnchor.middle,
+        alignmentY: AlignmentY.central,
         fontSize: FontSize.custom(25, Unit.px));
   }
 
   // create main canvas
   var plot = SvgCanvas(
-      fill: backgroundColor,
-      width: width, height: height,
-      children: []);
+      fill: backgroundColor, width: width, height: height, children: []);
 
   // title creation, if exist
   if (titleWidget != null) {
@@ -69,24 +73,26 @@ SvgCanvas canvasLine({@required final Array ax,
   final lengthY = yEnd - yStart;
   final distDeltaY = lengthY / ay.length;
 
-  var plotGrid = grid_line(ax: ax,
-      ay: ay,
-      xStart: xStart,
-      xEnd: xEnd,
-      yStart: yStart,
-      yEnd: yEnd,
-      distDeltaX: distDeltaX,
-      distDeltaY: distDeltaY,
-      frameGridStrokeColor: gridColor ?? Color.gray,
-      frameGridDasharray: StrokeDasharray.dash5,
-      frameAxisStrokeColor: axisColor ?? Color.black,
-      textAxisStrokeColor: axisTextColor ?? Color.black,
-      grid: showGrid,
+  var plotGrid = grid_line(
+    ax: ax,
+    ay: ay,
+    xStart: xStart,
+    xEnd: xEnd,
+    yStart: yStart,
+    yEnd: yEnd,
+    distDeltaX: distDeltaX,
+    distDeltaY: distDeltaY,
+    frameGridStrokeColor: gridColor ?? Color.gray,
+    frameGridDasharray: StrokeDasharray.dash5,
+    frameAxisStrokeColor: axisColor ?? Color.black,
+    textAxisStrokeColor: axisTextColor ?? Color.black,
+    grid: showGrid,
   );
 
   var linesSvg = <SvgWidget>[];
   for (var l in lines) {
-    linesSvg.add(l.generate(ax, xStart, xEnd, yStart, yEnd, distDeltaX, yMin, yMax));
+    linesSvg.add(
+        l.generate(ax, xStart, xEnd, yStart, yEnd, distDeltaX, yMin, yMax));
   }
   var linesGroup = Group(children: linesSvg, id: 'lines');
 
