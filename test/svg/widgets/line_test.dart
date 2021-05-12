@@ -1,6 +1,8 @@
 import 'package:scidart_plot/scidart_plot.dart';
 import 'package:test/test.dart';
 
+import '../../helpers.dart';
+
 void main() {
   const directory = './test_files/';
 
@@ -16,7 +18,7 @@ void main() {
         )
       ]);
 
-      await svg.save(directory + 'lineSvg');
+      await saveSvg(svg, directory + 'lineSvg');
     });
 
     test('Create a Line', () async {
@@ -27,11 +29,11 @@ void main() {
             x2: 100,
             y2: 100,
             stroke: Color.rgb(10, 200, 39),
-            strokeWidth: 10,
-            strokeDasharray: '1% 1%')
+            strokeWidth: StrokeWidth.width10,
+            strokeDasharray: StrokeDasharray.dash1)
       ]);
 
-      await svg.save(directory + 'lineComplexSvg');
+      await saveSvg(svg, directory + 'lineComplexSvg');
     });
   });
 }

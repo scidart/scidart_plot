@@ -1,6 +1,9 @@
-import 'package:color/color.dart';
 import 'package:meta/meta.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
@@ -14,14 +17,23 @@ class Rect implements SvgWidget {
   double height;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
-  double strokeWidth;
-  String strokeDasharray;
+  @override
+  StrokeWidth strokeWidth;
+  @override
+  StrokeDasharray strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
-  String unit;
+  @override
+  Unit unit;
+  @override
   Visibility visibility;
 
   /// Rect constructor
@@ -38,35 +50,26 @@ class Rect implements SvgWidget {
   /// [transform] custom css transformation
   /// [unit] unit used in the parameters, default is px (pixel)
   /// [visibility] visibility of the element, default is inherit
-  Rect({@required this.x,
-    @required this.y,
-    @required this.width,
-    @required this.height,
-    this.id,
-    this.fill,
-    this.stroke,
-    this.strokeWidth,
-    this.strokeDasharray,
-    this.style,
-    this.transform,
-    this.unit = 'px',
-    this.visibility = Visibility.inherit});
+  Rect(
+      {@required this.x,
+      @required this.y,
+      @required this.width,
+      @required this.height,
+      this.id,
+      this.fill,
+      this.stroke,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    var xml = '<rect x="${x}${unitConv(unit)}" y="${y}${unitConv(
-        unit)}" width="${width}${unitConv(unit)}" height="${height}${unitConv(
-        unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+    var xml = '<rect x="${roundPixels(x, unit)}" y="${roundPixels(y, unit)}" '
+        'width="${roundPixels(width, unit)}" height="${roundPixels(height, unit)}" '
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

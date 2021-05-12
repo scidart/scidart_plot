@@ -1,6 +1,12 @@
-import 'package:color/color.dart';
 import 'package:meta/meta.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/alignment_y.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
+import 'package:scidart_plot/src/svg/enums/font_size.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
+import 'package:scidart_plot/src/svg/enums/text_anchor.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
@@ -11,17 +17,28 @@ class Text implements SvgWidget {
   double x;
   double y;
   String text;
-  double rotate;
-  String unit;
+  TextAnchor textAnchor;
+  AlignmentY alignmentY;
+  FontSize fontSize;
 
   //override
+  @override
+  Unit unit;
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
-  double strokeWidth;
-  String strokeDasharray;
+  @override
+  StrokeWidth strokeWidth;
+  @override
+  StrokeDasharray strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
+  @override
   Visibility visibility;
 
   /// Text constructor
@@ -41,30 +58,26 @@ class Text implements SvgWidget {
       {@required this.x,
       @required this.y,
       @required this.text,
-      this.rotate,
       this.id,
       this.fill,
       this.stroke,
       this.strokeWidth,
       this.strokeDasharray,
       this.style,
-        this.transform,
-        this.unit = 'px',
-        this.visibility = Visibility.inherit});
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit,
+      this.textAnchor = TextAnchor.start,
+      this.alignmentY = AlignmentY.bottom,
+      this.fontSize});
 
   @override
   String toXML() {
-    var xml = '<text x="${x}${unitConv(unit)}" y="${y}${unitConv(unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} >'
+    var xml = '<text x="${roundPixels(x, unit)}" y="${roundPixels(y, unit)}" '
+        'text-anchor="${textAnchor.xmlValue}" '
+        'font-size="${FontSize.toXml(fontSize)}" '
+        'dy="${alignmentY.xmlValue}" '
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} >'
         '${text}'
         '</text>';
     return xml;

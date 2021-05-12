@@ -1,6 +1,9 @@
-import 'package:color/color.dart';
 import 'package:meta/meta.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
@@ -13,14 +16,23 @@ class Circle implements SvgWidget {
   double r;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
-  double strokeWidth;
-  String strokeDasharray;
+  @override
+  StrokeWidth strokeWidth;
+  @override
+  StrokeDasharray strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
-  String unit;
+  @override
+  Unit unit;
+  @override
   Visibility visibility;
 
   /// Circle constructor
@@ -36,33 +48,26 @@ class Circle implements SvgWidget {
   /// [transform] custom css transformation
   /// [unit] unit used in the parameters, default is px (pixel)
   /// [visibility] visibility of the element, default is inherit
-  Circle({@required this.cx,
-    @required this.cy,
-    @required this.r,
-    this.id,
-    this.fill,
-    this.stroke,
-    this.strokeWidth,
-    this.strokeDasharray,
-    this.style,
-    this.transform,
-    this.unit = 'px',
-    this.visibility = Visibility.inherit});
+  Circle(
+      {@required this.cx,
+      @required this.cy,
+      @required this.r,
+      this.id,
+      this.fill,
+      this.stroke,
+      this.strokeWidth,
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    var xml = '<circle cx="${cx}${unitConv(unit)}" cy="${cy}${unitConv(
-        unit)}" r="${r}${unitConv(unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+    var xml =
+        '<circle cx="${roundPixels(cx, unit)}" cy="${roundPixels(cy, unit)}" '
+        'r="${roundPixels(r, unit)}" '
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

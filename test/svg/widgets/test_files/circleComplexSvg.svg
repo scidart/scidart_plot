@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg width="100.0" height="100.0" xmlns="http://www.w3.org/2000/svg">
-	<circle cx="10.0px" cy="10.0px" r="10.0px" id="none" fill="#0ec822" stroke="#000000" stroke-width="1.0px"
-			stroke-dasharray="1% 1%" style="none" visibility="inherit"/>
+	<circle cx="10.0px" cy="10.0px" r="10.0px" id="none" fill="#0e0e0e" stroke="#000000" stroke-width="1.0px" stroke-dasharray="1,1" style="none" visibility="inherit" />
 </svg>

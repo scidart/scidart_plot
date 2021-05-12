@@ -1,7 +1,10 @@
-import 'package:color/color.dart';
 import 'package:meta/meta.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/primitives/point_pair.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
@@ -11,14 +14,23 @@ class Polygon implements SvgWidget {
   List<PointPair> points;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
-  double strokeWidth;
-  String strokeDasharray;
+  @override
+  StrokeWidth strokeWidth;
+  @override
+  StrokeDasharray strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
-  String unit;
+  @override
+  Unit unit;
+  @override
   Visibility visibility;
 
   /// Polygon constructor
@@ -34,32 +46,23 @@ class Polygon implements SvgWidget {
   /// [visibility] visibility of the element, default is inherit
   Polygon(
       {@required this.points,
-        this.id,
+      this.id,
       this.fill,
       this.stroke,
       this.strokeWidth,
-        this.strokeDasharray,
-        this.style,
-        this.transform,
-        this.unit = 'px',
-        this.visibility = Visibility.inherit});
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    String pointsXML = '';
+    var pointsXML = '';
     points.forEach((p) => pointsXML += p.toXML() + ' ');
 
     var xml = '<polygon points="${pointsXML}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

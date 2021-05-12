@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="414.0" height="318.0" xmlns="http://www.w3.org/2000/svg">
+	<text x="207.0px" y="15.0px" text-anchor="middle" font-size="25.0px" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >some title to test</text>
+	<path id="plot_pie" fill="blue" stroke="black" stroke-width="5.0px" stroke-dasharray="2,2" style="none" visibility="inherit" d="M 307.8 141.2 A 106.0 106.0 0 0 0 207.0 68.0 L 207.0 174.0"/>
+	<path id="plot_pie" fill="red" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" d="M 207.0 280.0 A 106.0 106.0 0 0 0 307.8119907272863 141.2441985962556 L 207.0 174.0"/>
+	<path id="plot_pie" fill="green" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" d="M 207.0 68.0 A 106.0 106.0 0 0 0 207.0 280.0 L 207.0 174.0"/>
+	<g id="legend" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<rect x="349.8px" y="258.0px" width="64.2px" height="60.0px" id="none" fill="white" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<g id="legend item" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<line x1="354.8px" y1="273.0px" x2="364.8px" y2="273.0px" id="none" fill="none" stroke="blue" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<text x="369.8px" y="273.0px" text-anchor="start" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >slice 1</text>
+</g>
+	<g id="legend item" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<line x1="354.8px" y1="288.0px" x2="364.8px" y2="288.0px" id="none" fill="none" stroke="red" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<text x="369.8px" y="288.0px" text-anchor="start" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >slice 2</text>
+</g>
+	<g id="legend item" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<line x1="354.8px" y1="303.0px" x2="364.8px" y2="303.0px" id="none" fill="none" stroke="green" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<text x="369.8px" y="303.0px" text-anchor="start" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >slice 3</text>
+</g>
+</g>
+</svg>

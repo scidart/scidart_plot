@@ -1,21 +1,10 @@
-import 'package:scidart_plot/src/svg/canvas/svg_canvas.dart';
+library plot;
 
-import 'grid.dart';
-
-SvgCanvas plot(x, y) {
-  var plotWidth = 404.0;
-  var plotHeight = 278.0;
-
-  var plotGrid = grid(mainWidth: plotWidth,
-      mainHeight: plotHeight,
-      minX: 0,
-      maxX: 10,
-      minY: 0,
-      maxY: 10);
-  var plot = SvgCanvas(
-      width: plotWidth, height: plotHeight,
-      children: [
-        plotGrid
-      ]);
-  return plot;
-}
+export './general/canvas_general.dart';
+export './general/plot_general.dart';
+export './general/plot_general_type.dart';
+export './pie/canvas_pie.dart';
+export './pie/plot_pie.dart';
+export './widgets/legend.dart';
+export './widgets/legend_item.dart';
+export './widgets/legend_position.dart';

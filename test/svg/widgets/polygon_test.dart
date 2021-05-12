@@ -1,6 +1,7 @@
 import 'package:scidart_plot/scidart_plot.dart';
-import 'package:scidart_plot/src/svg/primitives/point_pair.dart';
 import 'package:test/test.dart';
+
+import '../../helpers.dart';
 
 void main() {
   const directory = './test_files/';
@@ -19,7 +20,7 @@ void main() {
         )
       ]);
 
-      await svg.save(directory + 'polygonSvg');
+      await saveSvg(svg, directory + 'polygonSvg');
     });
 
     test('Create a Polygon', () async {
@@ -33,11 +34,11 @@ void main() {
             ],
             fill: Color.rgb(100, 100, 8),
             stroke: Color.rgb(10, 200, 39),
-            strokeWidth: 5,
-            strokeDasharray: '1% 1%')
+            strokeWidth: StrokeWidth.width5,
+            strokeDasharray: StrokeDasharray.dash1)
       ]);
 
-      await svg.save(directory + 'polygonComplexSvg');
+      await saveSvg(svg, directory + 'polygonComplexSvg');
     });
   });
 }

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg width="100.0" height="100.0" xmlns="http://www.w3.org/2000/svg">
-    <g id="none" fill="none" stroke="#000000" stroke-width="nonepx" stroke-dasharray="none" style="none"
-       visibility="hidden">
-        <circle cx="10.0px" cy="10.0px" r="10.0px" id="none" fill="none" stroke="#000000" stroke-width="nonepx"
-                stroke-dasharray="none" style="none" visibility="inherit"/>
-        <circle cx="10.0px" cy="10.0px" r="5.0px" id="none" fill="none" stroke="#f8f8f8" stroke-width="nonepx"
-                stroke-dasharray="none" style="none" visibility="inherit"/>
-    </g>
+	<g id="none" fill="none" stroke="#000000" stroke-width="none" stroke-dasharray="none" style="none" visibility="hidden" >	<circle cx="10.0px" cy="10.0px" r="10.0px" id="none" fill="none" stroke="#000000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="10.0px" cy="10.0px" r="5.0px" id="none" fill="none" stroke="#f8f8f8" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+</g>
 </svg>

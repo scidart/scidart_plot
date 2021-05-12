@@ -1,6 +1,9 @@
-import 'package:color/color.dart';
 import 'package:meta/meta.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
@@ -14,14 +17,23 @@ class Ellipse implements SvgWidget {
   double ry;
 
   // override
+  @override
   String id;
+  @override
   Color fill;
+  @override
   Color stroke;
-  double strokeWidth;
-  String strokeDasharray;
+  @override
+  StrokeWidth strokeWidth;
+  @override
+  StrokeDasharray strokeDasharray;
+  @override
   String style;
+  @override
   String transform;
-  String unit;
+  @override
+  Unit unit;
+  @override
   Visibility visibility;
 
   /// Ellipse constructor
@@ -43,30 +55,22 @@ class Ellipse implements SvgWidget {
       @required this.cy,
       @required this.rx,
       @required this.ry,
-        this.id,
+      this.id,
       this.fill,
       this.stroke,
       this.strokeWidth,
-        this.strokeDasharray,
-        this.style,
-        this.transform,
-        this.unit = 'px',
-        this.visibility = Visibility.inherit});
+      this.strokeDasharray,
+      this.style,
+      this.transform,
+      this.unit,
+      this.visibility = Visibility.inherit});
 
   @override
   String toXML() {
-    var xml = '<ellipse cx="${cx}${unitConv(unit)}" cy="${cx}${unitConv(
-        unit)}" rx="${rx}${unitConv(unit)}" ry="${ry}${unitConv(unit)}" '
-        '${attributes(
-        id,
-        fill,
-        stroke,
-        strokeWidth,
-        strokeDasharray,
-        style,
-        transform,
-        unit,
-        visibility)} />';
+    var xml =
+        '<ellipse cx="${roundPixels(cx, unit)}" cy="${roundPixels(cx, unit)}" '
+        'rx="${roundPixels(rx, unit)}" ry="${roundPixels(ry, unit)}" '
+        '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} />';
     return xml;
   }
 

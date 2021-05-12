@@ -1,6 +1,8 @@
 import 'package:scidart_plot/scidart_plot.dart';
 import 'package:test/test.dart';
 
+import '../../helpers.dart';
+
 void main() {
   const directory = './test_files/';
 
@@ -10,7 +12,7 @@ void main() {
         Rect(x: 10, y: 10, width: 10, height: 10, stroke: Color.hex('000000'))
       ]);
 
-      await svg.save(directory + 'rectSvg');
+      await saveSvg(svg, directory + 'rectSvg');
     });
 
     test('Create a Rect complex', () async {
@@ -20,13 +22,13 @@ void main() {
             y: 10,
             width: 10,
             height: 10,
-            fill: RgbColor(14, 200, 34),
+            fill: Color.rgb(14, 200, 34),
             stroke: Color.hex('000000'),
-            strokeWidth: 1,
-            strokeDasharray: '1% 1%')
+            strokeWidth: StrokeWidth.width1,
+            strokeDasharray: StrokeDasharray.dash1)
       ]);
 
-      await svg.save(directory + 'rectComplexSvg');
+      await saveSvg(svg, directory + 'rectComplexSvg');
     });
   });
 }

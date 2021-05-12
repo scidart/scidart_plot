@@ -1,6 +1,9 @@
-import 'package:color/color.dart';
 import 'package:meta/meta.dart';
-import 'package:scidart_plot/src/svg/primitives/visibility.dart';
+import 'package:scidart_plot/src/svg/enums/color.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
+import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
+import 'package:scidart_plot/src/svg/enums/unit.dart';
+import 'package:scidart_plot/src/svg/enums/visibility.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
@@ -10,14 +13,23 @@ class Group implements SvgWidget {
   List<SvgWidget> children;
 
   // override
+  @override
   Color fill;
+  @override
   String id;
+  @override
   Color stroke;
-  String strokeDasharray;
-  double strokeWidth;
+  @override
+  StrokeDasharray strokeDasharray;
+  @override
+  StrokeWidth strokeWidth;
+  @override
   String style;
+  @override
   String transform;
-  String unit;
+  @override
+  Unit unit;
+  @override
   Visibility visibility;
 
   /// Group constructor
@@ -40,7 +52,7 @@ class Group implements SvgWidget {
       this.strokeWidth,
       this.style,
       this.transform,
-      this.unit = 'px',
+      this.unit,
       this.visibility = Visibility.inherit});
 
   @override
