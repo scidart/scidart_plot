@@ -11,7 +11,27 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a text element
+/// Class to generate SVG rectangles
+///
+/// # Constructors:
+/// ```dart
+/// Text(
+///       {required this.x,
+///       required this.y,
+///       required this.text,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit,
+///       this.textAnchor = TextAnchor.start,
+///       this.alignmentY = AlignmentY.bottom,
+///       this.fontSize});
+/// ```
 class Text implements SvgWidget {
   double x;
   double y;

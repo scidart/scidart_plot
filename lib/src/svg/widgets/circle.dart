@@ -8,7 +8,24 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a circle
+/// Class to generate SVG circles
+///
+/// # Constructors:
+/// ```dart
+/// Circle(
+///       {required this.cx,
+///       required this.cy,
+///       required this.r,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Circle implements SvgWidget {
   double cx;
   double cy;

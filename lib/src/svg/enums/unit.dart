@@ -1,5 +1,7 @@
+/// SVG length Unit enum.
 enum Unit { px, per, em }
 
+/// SVG length Unit extension, make the conversion easy.
 extension UnitExt on Unit {
   String get xmlValue {
     switch (this) {

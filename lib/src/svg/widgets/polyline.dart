@@ -8,7 +8,22 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
 
-/// Generate a Polyline
+/// Class to generate SVG polylines
+///
+/// # Constructors:
+/// ```dart
+/// Polyline(
+///       {required this.points,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Polyline implements SvgWidget {
   List<PointPair> points;
 

@@ -8,7 +8,22 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
 
-/// Generate a Polygon
+/// Class to generate SVG polygons
+///
+/// # Constructors:
+/// ```dart
+/// Polygon(
+///       {required this.points,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Polygon implements SvgWidget {
   List<PointPair> points;
 

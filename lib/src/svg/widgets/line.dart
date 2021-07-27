@@ -8,7 +8,24 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a line
+/// Class to generate SVG lines
+///
+/// # Constructors:
+/// ```dart
+/// Line(
+///       {required this.x1,
+///       required this.y1,
+///       required this.x2,
+///       required this.y2,
+///       this.id,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Line implements SvgWidget {
   double x1;
   double y1;

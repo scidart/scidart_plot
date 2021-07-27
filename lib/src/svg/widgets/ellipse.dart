@@ -8,7 +8,25 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a Ellipse
+/// Class to generate SVG ellipses
+///
+/// # Constructors:
+/// ```dart
+/// Ellipse(
+///       {required this.cx,
+///       required this.cy,
+///       required this.rx,
+///       required this.ry,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Ellipse implements SvgWidget {
   double cx;
   double cy;

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="414.0" height="288.0" xmlns="http://www.w3.org/2000/svg">
+	<g id="lines" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<g id="plot_line" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<line x1="60.0Unit.px" y1="134.0Unit.px" x2="60.0Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="60.0Unit.px" cy="134.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="66.9Unit.px" y1="48.9Unit.px" x2="66.9Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="66.9Unit.px" cy="48.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="73.8Unit.px" y1="10.0Unit.px" x2="73.8Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="73.8Unit.px" cy="10.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="80.6Unit.px" y1="38.3Unit.px" x2="80.6Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="80.6Unit.px" cy="38.3Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="87.5Unit.px" y1="118.4Unit.px" x2="87.5Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="87.5Unit.px" cy="118.4Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="94.4Unit.px" y1="207.0Unit.px" x2="94.4Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="94.4Unit.px" cy="207.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="101.3Unit.px" y1="256.0Unit.px" x2="101.3Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="101.3Unit.px" cy="256.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="108.2Unit.px" y1="238.9Unit.px" x2="108.2Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="108.2Unit.px" cy="238.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="115.0Unit.px" y1="164.9Unit.px" x2="115.0Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="115.0Unit.px" cy="164.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="121.9Unit.px" y1="74.1Unit.px" x2="121.9Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="121.9Unit.px" cy="74.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="128.8Unit.px" y1="15.8Unit.px" x2="128.8Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="128.8Unit.px" cy="15.8Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="135.7Unit.px" y1="21.6Unit.px" x2="135.7Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="135.7Unit.px" cy="21.6Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="142.6Unit.px" y1="88.3Unit.px" x2="142.6Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="142.6Unit.px" cy="88.3Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="149.4Unit.px" y1="179.7Unit.px" x2="149.4Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="149.4Unit.px" cy="179.7Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="156.3Unit.px" y1="246.4Unit.px" x2="156.3Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="156.3Unit.px" cy="246.4Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="163.2Unit.px" y1="252.2Unit.px" x2="163.2Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="163.2Unit.px" cy="252.2Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="170.1Unit.px" y1="193.9Unit.px" x2="170.1Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="170.1Unit.px" cy="193.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="177.0Unit.px" y1="103.1Unit.px" x2="177.0Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="177.0Unit.px" cy="103.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="183.8Unit.px" y1="29.1Unit.px" x2="183.8Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="183.8Unit.px" cy="29.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="190.7Unit.px" y1="12.0Unit.px" x2="190.7Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="190.7Unit.px" cy="12.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="197.6Unit.px" y1="61.0Unit.px" x2="197.6Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="197.6Unit.px" cy="61.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="204.5Unit.px" y1="149.6Unit.px" x2="204.5Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="204.5Unit.px" cy="149.6Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="211.4Unit.px" y1="229.7Unit.px" x2="211.4Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="211.4Unit.px" cy="229.7Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="218.2Unit.px" y1="258.0Unit.px" x2="218.2Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="218.2Unit.px" cy="258.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="225.1Unit.px" y1="219.1Unit.px" x2="225.1Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="225.1Unit.px" cy="219.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="232.0Unit.px" y1="134.0Unit.px" x2="232.0Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="232.0Unit.px" cy="134.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="238.9Unit.px" y1="48.9Unit.px" x2="238.9Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="238.9Unit.px" cy="48.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="245.8Unit.px" y1="10.0Unit.px" x2="245.8Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="245.8Unit.px" cy="10.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="252.6Unit.px" y1="38.3Unit.px" x2="252.6Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="252.6Unit.px" cy="38.3Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="259.5Unit.px" y1="118.4Unit.px" x2="259.5Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="259.5Unit.px" cy="118.4Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="266.4Unit.px" y1="207.0Unit.px" x2="266.4Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="266.4Unit.px" cy="207.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="273.3Unit.px" y1="256.0Unit.px" x2="273.3Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="273.3Unit.px" cy="256.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="280.2Unit.px" y1="238.9Unit.px" x2="280.2Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="280.2Unit.px" cy="238.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="287.0Unit.px" y1="164.9Unit.px" x2="287.0Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="287.0Unit.px" cy="164.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="293.9Unit.px" y1="74.1Unit.px" x2="293.9Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="293.9Unit.px" cy="74.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="300.8Unit.px" y1="15.8Unit.px" x2="300.8Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="300.8Unit.px" cy="15.8Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="307.7Unit.px" y1="21.6Unit.px" x2="307.7Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="307.7Unit.px" cy="21.6Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="314.6Unit.px" y1="88.3Unit.px" x2="314.6Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="314.6Unit.px" cy="88.3Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="321.4Unit.px" y1="179.7Unit.px" x2="321.4Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="321.4Unit.px" cy="179.7Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="328.3Unit.px" y1="246.4Unit.px" x2="328.3Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="328.3Unit.px" cy="246.4Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="335.2Unit.px" y1="252.2Unit.px" x2="335.2Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="335.2Unit.px" cy="252.2Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="342.1Unit.px" y1="193.9Unit.px" x2="342.1Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="342.1Unit.px" cy="193.9Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="349.0Unit.px" y1="103.1Unit.px" x2="349.0Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="349.0Unit.px" cy="103.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="355.8Unit.px" y1="29.1Unit.px" x2="355.8Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="355.8Unit.px" cy="29.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="362.7Unit.px" y1="12.0Unit.px" x2="362.7Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="362.7Unit.px" cy="12.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="369.6Unit.px" y1="61.0Unit.px" x2="369.6Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="369.6Unit.px" cy="61.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="376.5Unit.px" y1="149.6Unit.px" x2="376.5Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="376.5Unit.px" cy="149.6Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="383.4Unit.px" y1="229.7Unit.px" x2="383.4Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="383.4Unit.px" cy="229.7Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="390.2Unit.px" y1="258.0Unit.px" x2="390.2Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="390.2Unit.px" cy="258.0Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="397.1Unit.px" y1="219.1Unit.px" x2="397.1Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<circle cx="397.1Unit.px" cy="219.1Unit.px" r="2.0Unit.px" id="none" fill="#ff0000" stroke="#ff0000" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+</g>
+</g>
+	<g id="grid" fill="none" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >	<line x1="60.0Unit.px" y1="134.0Unit.px" x2="404.0Unit.px" y2="134.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="10.0Unit.px" x2="60.0Unit.px" y2="258.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="134.0Unit.px" x2="60.0Unit.px" y2="144.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="128.8Unit.px" y1="134.0Unit.px" x2="128.8Unit.px" y2="144.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="197.6Unit.px" y1="134.0Unit.px" x2="197.6Unit.px" y2="144.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="266.4Unit.px" y1="134.0Unit.px" x2="266.4Unit.px" y2="144.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="335.2Unit.px" y1="134.0Unit.px" x2="335.2Unit.px" y2="144.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="258.0Unit.px" x2="50.0Unit.px" y2="258.0Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="208.4Unit.px" x2="50.0Unit.px" y2="208.4Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="158.8Unit.px" x2="50.0Unit.px" y2="158.8Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="109.2Unit.px" x2="50.0Unit.px" y2="109.2Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="59.6Unit.px" x2="50.0Unit.px" y2="59.6Unit.px" id="none" fill="none" stroke="black" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" />
+	<text x="60.0Unit.px" y="154.0Unit.px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.0</text>
+	<text x="128.8Unit.px" y="154.0Unit.px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.02</text>
+	<text x="197.6Unit.px" y="154.0Unit.px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.04</text>
+	<text x="266.4Unit.px" y="154.0Unit.px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.06</text>
+	<text x="335.2Unit.px" y="154.0Unit.px" text-anchor="middle" font-size="medium" dy="0em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.08</text>
+	<text x="50.0Unit.px" y="258.0Unit.px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.998</text>
+	<text x="50.0Unit.px" y="208.4Unit.px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.5907</text>
+	<text x="50.0Unit.px" y="158.8Unit.px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >-0.1833</text>
+	<text x="50.0Unit.px" y="109.2Unit.px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.224</text>
+	<text x="50.0Unit.px" y="59.6Unit.px" text-anchor="end" font-size="medium" dy=".4em" id="none" fill="black" stroke="none" stroke-width="none" stroke-dasharray="none" style="none" visibility="inherit" >0.6314</text>
+	<line x1="128.8Unit.px" y1="10.0Unit.px" x2="128.8Unit.px" y2="258.0Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+	<line x1="197.6Unit.px" y1="10.0Unit.px" x2="197.6Unit.px" y2="258.0Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+	<line x1="266.4Unit.px" y1="10.0Unit.px" x2="266.4Unit.px" y2="258.0Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+	<line x1="335.2Unit.px" y1="10.0Unit.px" x2="335.2Unit.px" y2="258.0Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="208.4Unit.px" x2="404.0Unit.px" y2="208.4Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="158.8Unit.px" x2="404.0Unit.px" y2="158.8Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="109.2Unit.px" x2="404.0Unit.px" y2="109.2Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+	<line x1="60.0Unit.px" y1="59.6Unit.px" x2="404.0Unit.px" y2="59.6Unit.px" id="none" fill="none" stroke="gray" stroke-width="none" stroke-dasharray="5,5" style="none" visibility="inherit" />
+</g>
+</svg>

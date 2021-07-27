@@ -13,6 +13,26 @@ import 'package:scidart_plot/src/svg/widgets/abstract/attributes.dart';
 
 import 'abstract/svg_widget.dart';
 
+/// Class to generate SVG arcs
+///
+/// # Constructors:
+/// ```dart
+/// Arc(
+///       {required this.cx,
+///       required this.cy,
+///       required this.r,
+///       required this.startAngle,
+///       required this.endAngle,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Arc implements SvgWidget {
   double cx;
   double cy;

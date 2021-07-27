@@ -1,3 +1,4 @@
+/// SVG color enum and helper class. Make pattern and conversion easy.
 class Color {
   String _value = 'none';
 

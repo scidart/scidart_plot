@@ -1,6 +1,7 @@
 import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 
+/// SVG font enum/helper class. Make the conversions easy.
 class FontSize {
   String _value = 'medium';
 

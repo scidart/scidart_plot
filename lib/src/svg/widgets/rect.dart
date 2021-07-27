@@ -8,7 +8,25 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a rectangle
+/// Class to generate SVG rectangles
+///
+/// # Constructors:
+/// ```dart
+/// Rect(
+///       {required this.x,
+///       required this.y,
+///       required this.width,
+///       required this.height,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Rect implements SvgWidget {
   double x;
   double y;

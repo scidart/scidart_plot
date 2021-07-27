@@ -4,6 +4,7 @@ import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
 import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/enums/visibility.dart';
 
+/// Base SVG attribuites that are present in all SVG class to string conversions.
 String attributes(
     String? id,
     Color? fill,

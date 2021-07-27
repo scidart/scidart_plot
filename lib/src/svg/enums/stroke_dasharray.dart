@@ -1,3 +1,4 @@
+/// SVG stroke dash array enum and helper class. Make pattern and conversion easy.
 class StrokeDasharray {
   String _value = 'none';
 

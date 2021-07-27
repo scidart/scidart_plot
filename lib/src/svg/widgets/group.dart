@@ -7,7 +7,22 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 
 import 'abstract/attributes.dart';
 
-/// Generate a group of SVG elements
+/// Class to generate SVG groups
+///
+/// # Constructors:
+/// ```dart
+/// Group(
+///       {required this.children,
+///       this.fill,
+///       this.id,
+///       this.stroke,
+///       this.strokeDasharray,
+///       this.strokeWidth,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Group implements SvgWidget {
   List<SvgWidget> children;
 
