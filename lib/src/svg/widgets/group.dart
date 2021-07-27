@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
@@ -14,23 +13,23 @@ class Group implements SvgWidget {
 
   // override
   @override
-  Color fill;
+  Color? fill;
   @override
-  String id;
+  String? id;
   @override
-  Color stroke;
+  Color? stroke;
   @override
-  StrokeDasharray strokeDasharray;
+  StrokeDasharray? strokeDasharray;
   @override
-  StrokeWidth strokeWidth;
+  StrokeWidth? strokeWidth;
   @override
-  String style;
+  String? style;
   @override
-  String transform;
+  String? transform;
   @override
-  Unit unit;
+  Unit? unit;
   @override
-  Visibility visibility;
+  Visibility? visibility;
 
   /// Group constructor
   /// [children] three with SVG elements
@@ -44,7 +43,7 @@ class Group implements SvgWidget {
   /// [unit] unit used in the parameters, default is px (pixel)
   /// [visibility] visibility of the element, default is inherit
   Group(
-      {@required this.children,
+      {required this.children,
       this.fill,
       this.id,
       this.stroke,
@@ -64,7 +63,7 @@ class Group implements SvgWidget {
 
     var xml =
         '<g ${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} >'
-        '${gXml}'
+        '$gXml'
         '</g>';
 
     return xml;

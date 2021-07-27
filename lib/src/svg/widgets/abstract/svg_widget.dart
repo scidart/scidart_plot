@@ -15,15 +15,15 @@ import 'package:scidart_plot/src/svg/enums/visibility.dart';
 /// Root class that have all the basic SVG attributes
 abstract class SvgWidget {
   // properties
-  String id;
-  Color fill;
-  Color stroke;
-  StrokeWidth strokeWidth;
-  StrokeDasharray strokeDasharray;
-  String style;
-  String transform;
-  Visibility visibility;
-  Unit unit;
+  String? id;
+  Color? fill;
+  Color? stroke;
+  StrokeWidth? strokeWidth;
+  StrokeDasharray? strokeDasharray;
+  String? style;
+  String? transform;
+  Visibility? visibility;
+  Unit? unit;
 
   // methods
   /// Convert the Svg structure to XML string

@@ -1,18 +1,17 @@
-import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/plot/pie/plot_pie.dart';
 import 'package:scidart_plot/src/plot/widgets/legend.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 
 SvgCanvas canvasPie({
-  @required final Array series,
-  @required final List<PlotPie> pies,
+  required final Array series,
+  required final List<PlotPie> pies,
   final double width = 414.0,
   double height = 288.0,
-  final Color backgroundColor,
-  final String title,
-  final Legend legend,
-  final Color axisTextColor,
+  final Color? backgroundColor,
+  final String? title,
+  final Legend? legend,
+  final Color? axisTextColor,
 }) {
   if (series.length != pies.length) {
     throw FormatException('series and pies must have same length');

@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
@@ -9,7 +8,7 @@ class SvgCanvas {
   List<SvgWidget> children;
   double width;
   double height;
-  Color fill;
+  Color? fill;
 
   // private attributes
   final String _xmlns = 'http://www.w3.org/2000/svg';
@@ -19,15 +18,15 @@ class SvgCanvas {
   /// [height] height of SVG
   /// [children] three with SVG elements
   SvgCanvas(
-      {@required this.width,
-      @required this.height,
-      @required this.children,
+      {required this.width,
+      required this.height,
+      required this.children,
       this.fill});
 
   /// Convert the Svg structure to XML string
   String toXML() {
     var xml = '<?xml version="1.0" encoding="UTF-8" ?>\n'
-        '<svg width="${roundPixelsOnly(width)}" height="${roundPixelsOnly(height)}" xmlns="${_xmlns}">\n';
+        '<svg width="${roundPixelsOnly(width)}" height="${roundPixelsOnly(height)}" xmlns="$_xmlns">\n';
     if (fill != null) {
       children.insert(
           0,

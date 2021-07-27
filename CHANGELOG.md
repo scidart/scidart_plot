@@ -1,3 +1,7 @@
+## 0.0.2-dev.1
+
+- null safety added
+
 ## 0.0.1-dev.3
 
 - Pie plot implemented

@@ -12,6 +12,5 @@ extension VisibilityExt on Visibility {
       case Visibility.inherit:
         return 'inherit';
     }
-    return '';
   }
 }

@@ -7,8 +7,8 @@ import 'package:scidart_plot/src/svg/svg.dart';
 
 class Legend {
   List<LegendItem> items;
-  Color backgroundColor = Color.white;
-  Color textColor;
+  Color? backgroundColor = Color.white;
+  Color? textColor;
   LegendPosition position;
 
   Legend(this.items, this.position, {this.backgroundColor, this.textColor});

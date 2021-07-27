@@ -1,21 +1,20 @@
-import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/plot/widgets/plot_base.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
 
 class PlotPie extends PlotBase {
   @override
-  String id;
+  String? id;
   @override
-  Color stroke;
+  Color? stroke;
   @override
-  Color fill;
+  Color? fill;
   @override
-  StrokeWidth strokeWidth;
+  StrokeWidth? strokeWidth;
   @override
-  StrokeDasharray strokeDasharray;
+  StrokeDasharray? strokeDasharray;
 
   PlotPie(
-      {@required this.fill,
+      {required this.fill,
       this.stroke,
       this.strokeWidth,
       this.strokeDasharray,

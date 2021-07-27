@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/plot/general/plot_general_type.dart';
 import 'package:scidart_plot/src/plot/widgets/plot_base.dart';
@@ -9,18 +8,18 @@ class PlotGeneral extends PlotBase {
   PlotGeneralType plotGeneralType;
 
   @override
-  String id;
+  String? id;
   @override
-  Color stroke;
+  Color? stroke;
   @override
-  Color fill;
+  Color? fill;
   @override
-  StrokeWidth strokeWidth;
+  StrokeWidth? strokeWidth;
   @override
-  StrokeDasharray strokeDasharray;
+  StrokeDasharray? strokeDasharray;
 
   PlotGeneral(
-      {@required this.ay,
+      {required this.ay,
       this.stroke,
       this.fill,
       this.strokeWidth,
@@ -67,7 +66,7 @@ class PlotGeneral extends PlotBase {
           widgets.add(Circle(
               cx: xPoint,
               cy: yPoint,
-              r: strokeWidth != null ? strokeWidth.getValue() : 2.0,
+              r: strokeWidth?.getValue() ?? 2.0,
               stroke: stroke,
               fill: fill ?? stroke,
               strokeDasharray: strokeDasharray));
@@ -92,7 +91,7 @@ class PlotGeneral extends PlotBase {
           widgets.add(Circle(
               cx: xPoint,
               cy: yPoint,
-              r: strokeWidth != null ? strokeWidth.getValue() : 2.0,
+              r: strokeWidth?.getValue() ?? 2.0,
               stroke: stroke,
               fill: fill ?? stroke,
               strokeDasharray: strokeDasharray));
@@ -100,7 +99,7 @@ class PlotGeneral extends PlotBase {
         break;
       case PlotGeneralType.Bar:
         var middleY = yStart + ((yEnd - yStart) / 2);
-        var width = strokeWidth != null ? strokeWidth.getValue() : 2.0;
+        var width = strokeWidth?.getValue() ?? 2.0;
 
         for (var i = 0; i < ax.length; i++) {
           var xPoint = calcXPoint(xStart, i, distDeltaX);

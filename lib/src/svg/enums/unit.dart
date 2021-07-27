@@ -10,6 +10,5 @@ extension UnitExt on Unit {
       case Unit.em:
         return 'em';
     }
-    return 'px';
   }
 }

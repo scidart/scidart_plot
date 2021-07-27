@@ -10,6 +10,5 @@ extension AlignmentYExt on AlignmentY {
       case AlignmentY.bottom:
         return '0em';
     }
-    return '0em';
   }
 }

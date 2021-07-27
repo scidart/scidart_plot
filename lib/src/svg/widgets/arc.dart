@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/scidart_plot.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
@@ -22,38 +21,38 @@ class Arc implements SvgWidget {
   double endAngle;
 
   @override
-  Color fill;
+  Color? fill;
 
   @override
-  String id;
+  String? id;
 
   @override
-  Color stroke;
+  Color? stroke;
 
   @override
-  StrokeDasharray strokeDasharray;
+  StrokeDasharray? strokeDasharray;
 
   @override
-  StrokeWidth strokeWidth;
+  StrokeWidth? strokeWidth;
 
   @override
-  String style;
+  String? style;
 
   @override
-  String transform;
+  String? transform;
 
   @override
-  Unit unit;
+  Unit? unit;
 
   @override
-  Visibility visibility;
+  Visibility? visibility;
 
   Arc(
-      {@required this.cx,
-      @required this.cy,
-      @required this.r,
-      @required this.startAngle,
-      @required this.endAngle,
+      {required this.cx,
+      required this.cy,
+      required this.r,
+      required this.startAngle,
+      required this.endAngle,
       this.id,
       this.fill,
       this.stroke,
@@ -85,7 +84,7 @@ class Arc implements SvgWidget {
 
     return '<path ${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} '
         'd="M ${roundPixelsOnly(startX)} ${roundPixelsOnly(startY)} '
-        'A ${roundPixelsOnly(r)} ${roundPixelsOnly(r)} 0 ${largeArcFlag} 0 ${endX} ${endY} '
+        'A ${roundPixelsOnly(r)} ${roundPixelsOnly(r)} 0 $largeArcFlag 0 $endX $endY '
         'L ${roundPixelsOnly(cx)} ${roundPixelsOnly(cy)}"/>';
   }
 }
