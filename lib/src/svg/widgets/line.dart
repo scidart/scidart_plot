@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
@@ -9,7 +8,24 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a line
+/// Class to generate SVG lines
+///
+/// # Constructors:
+/// ```dart
+/// Line(
+///       {required this.x1,
+///       required this.y1,
+///       required this.x2,
+///       required this.y2,
+///       this.id,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Line implements SvgWidget {
   double x1;
   double y1;
@@ -18,25 +34,25 @@ class Line implements SvgWidget {
 
   // override
   @override
-  String id;
+  String? id;
   @override
-  Color stroke;
+  Color? stroke;
   @override
-  StrokeWidth strokeWidth;
+  StrokeWidth? strokeWidth;
   @override
-  StrokeDasharray strokeDasharray;
+  StrokeDasharray? strokeDasharray;
   @override
-  String style;
+  String? style;
   @override
-  String transform;
+  String? transform;
   @override
-  Unit unit;
+  Unit? unit;
   @override
-  Visibility visibility;
+  Visibility? visibility;
 
   // not used
   @override
-  Color fill;
+  Color? fill;
 
   /// Line constructor
   /// [x1] start x coordinate point
@@ -52,10 +68,10 @@ class Line implements SvgWidget {
   /// [unit] unit used in the parameters, default is px (pixel)]
   /// [visibility] visibility of the element, default is inherit
   Line(
-      {@required this.x1,
-      @required this.y1,
-      @required this.x2,
-      @required this.y2,
+      {required this.x1,
+      required this.y1,
+      required this.x2,
+      required this.y2,
       this.id,
       this.stroke,
       this.strokeWidth,

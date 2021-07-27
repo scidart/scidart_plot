@@ -1,5 +1,7 @@
+/// SVG visibilty enum.
 enum Visibility { inherit, visible, hidden, collapse }
 
+/// SVG visibility extension, make the conversion easy.
 extension VisibilityExt on Visibility {
   String get xmlValue {
     switch (this) {
@@ -12,6 +14,5 @@ extension VisibilityExt on Visibility {
       case Visibility.inherit:
         return 'inherit';
     }
-    return '';
   }
 }

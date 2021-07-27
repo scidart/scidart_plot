@@ -14,11 +14,10 @@ void main() {
       var sg = arraySin(arrayMultiplyToScalar(n, 2 * pi * f1));
       print(sg);
 
-      //https://css-tricks.com/how-to-make-charts-with-svg/
-      //https://google.github.io/charts/flutter/example/line_charts/simple
-
       var line = PlotGeneral(ay: sg);
       var plotExample = canvasGeneral(ax: n, lines: [line]);
+
+      print(plotExample);
 
       await saveSvg(plotExample, directory + 'plotSimple');
     });

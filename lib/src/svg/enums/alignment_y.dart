@@ -1,5 +1,7 @@
+/// svg element alignment enum
 enum AlignmentY { top, central, bottom }
 
+/// extension to make conversions easy
 extension AlignmentYExt on AlignmentY {
   String get xmlValue {
     switch (this) {
@@ -10,6 +12,5 @@ extension AlignmentYExt on AlignmentY {
       case AlignmentY.bottom:
         return '0em';
     }
-    return '0em';
   }
 }

@@ -1,5 +1,6 @@
+/// SVG color enum and helper class. Make pattern and conversion easy.
 class Color {
-  String _value;
+  String _value = 'none';
 
   Color(String value) {
     _value = value;
@@ -168,7 +169,7 @@ class Color {
     return Color(rh + gh + bh);
   }
 
-  static String toXml(Color color) {
+  static String toXml(Color? color) {
     var colorStr = color != null ? color._value : Color.none._value;
     try {
       int.parse(colorStr, radix: 16);

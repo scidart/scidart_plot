@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart/numdart.dart';
 import 'package:scidart_plot/src/plot/general/plot_general.dart';
 import 'package:scidart_plot/src/svg/svg.dart';
@@ -53,17 +52,17 @@ import 'grid_general.dart';
 /// */
 /// ```
 SvgCanvas canvasGeneral({
-  @required final Array ax,
-  @required final List<PlotGeneral> lines,
+  required final Array ax,
+  required final List<PlotGeneral> lines,
   final double width = 414.0,
   double height = 288.0,
   final bool showGrid = true,
-  final Color backgroundColor,
-  final String title,
-  final Legend legend,
-  final Color gridColor,
-  final Color axisColor,
-  final Color axisTextColor,
+  final Color? backgroundColor,
+  final String? title,
+  final Legend? legend,
+  final Color? gridColor,
+  final Color? axisColor,
+  final Color? axisTextColor,
 }) {
   // default margins
   final frameMarginLeft = 60.0;

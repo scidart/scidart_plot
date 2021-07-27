@@ -1,8 +1,9 @@
 import 'package:scidart_plot/src/svg/enums/unit.dart';
 import 'package:scidart_plot/src/svg/widgets/abstract/unit_converter.dart';
 
+/// SVG stroke width enum and helper class. Make pattern and conversion easy.
 class StrokeWidth {
-  double _value;
+  double _value = 0;
 
   StrokeWidth(double value) {
     _value = value;
@@ -19,7 +20,7 @@ class StrokeWidth {
     return StrokeWidth(value);
   }
 
-  static String toXml(StrokeWidth strokeWidth, Unit unit) {
+  static String toXml(StrokeWidth? strokeWidth, Unit? unit) {
     if (strokeWidth != null && strokeWidth._value >= 0) {
       return roundPixels(strokeWidth._value, unit);
     } else {
@@ -28,6 +29,6 @@ class StrokeWidth {
   }
 
   double getValue() {
-    return _value ?? 0;
+    return _value;
   }
 }

@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/svg/enums/alignment_y.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/font_size.dart';
@@ -12,34 +11,54 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a text element
+/// Class to generate SVG rectangles
+///
+/// # Constructors:
+/// ```dart
+/// Text(
+///       {required this.x,
+///       required this.y,
+///       required this.text,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit,
+///       this.textAnchor = TextAnchor.start,
+///       this.alignmentY = AlignmentY.bottom,
+///       this.fontSize});
+/// ```
 class Text implements SvgWidget {
   double x;
   double y;
   String text;
   TextAnchor textAnchor;
   AlignmentY alignmentY;
-  FontSize fontSize;
+  FontSize? fontSize;
 
   //override
   @override
-  Unit unit;
+  Unit? unit;
   @override
-  String id;
+  String? id;
   @override
-  Color fill;
+  Color? fill;
   @override
-  Color stroke;
+  Color? stroke;
   @override
-  StrokeWidth strokeWidth;
+  StrokeWidth? strokeWidth;
   @override
-  StrokeDasharray strokeDasharray;
+  StrokeDasharray? strokeDasharray;
   @override
-  String style;
+  String? style;
   @override
-  String transform;
+  String? transform;
   @override
-  Visibility visibility;
+  Visibility? visibility;
 
   /// Text constructor
   /// [x] left top x coordinate of the text
@@ -55,9 +74,9 @@ class Text implements SvgWidget {
   /// [unit] unit used in the parameters, default is px (pixel)
   /// [visibility] visibility of the element, default is inherit
   Text(
-      {@required this.x,
-      @required this.y,
-      @required this.text,
+      {required this.x,
+      required this.y,
+      required this.text,
       this.id,
       this.fill,
       this.stroke,
@@ -78,7 +97,7 @@ class Text implements SvgWidget {
         'font-size="${FontSize.toXml(fontSize)}" '
         'dy="${alignmentY.xmlValue}" '
         '${attributes(id, fill, stroke, strokeWidth, strokeDasharray, style, transform, unit, visibility)} >'
-        '${text}'
+        '$text'
         '</text>';
     return xml;
   }

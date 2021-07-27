@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:scidart_plot/src/svg/enums/color.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_dasharray.dart';
 import 'package:scidart_plot/src/svg/enums/stroke_width.dart';
@@ -9,7 +8,24 @@ import 'package:scidart_plot/src/svg/widgets/abstract/svg_widget.dart';
 import 'abstract/attributes.dart';
 import 'abstract/unit_converter.dart';
 
-/// Generate a circle
+/// Class to generate SVG circles
+///
+/// # Constructors:
+/// ```dart
+/// Circle(
+///       {required this.cx,
+///       required this.cy,
+///       required this.r,
+///       this.id,
+///       this.fill,
+///       this.stroke,
+///       this.strokeWidth,
+///       this.strokeDasharray,
+///       this.style,
+///       this.transform,
+///       this.unit,
+///       this.visibility = Visibility.inherit});
+/// ```
 class Circle implements SvgWidget {
   double cx;
   double cy;
@@ -17,23 +33,23 @@ class Circle implements SvgWidget {
 
   // override
   @override
-  String id;
+  String? id;
   @override
-  Color fill;
+  Color? fill;
   @override
-  Color stroke;
+  Color? stroke;
   @override
-  StrokeWidth strokeWidth;
+  StrokeWidth? strokeWidth;
   @override
-  StrokeDasharray strokeDasharray;
+  StrokeDasharray? strokeDasharray;
   @override
-  String style;
+  String? style;
   @override
-  String transform;
+  String? transform;
   @override
-  Unit unit;
+  Unit? unit;
   @override
-  Visibility visibility;
+  Visibility? visibility;
 
   /// Circle constructor
   /// [cx] center x coordinate of the circle
@@ -49,9 +65,9 @@ class Circle implements SvgWidget {
   /// [unit] unit used in the parameters, default is px (pixel)
   /// [visibility] visibility of the element, default is inherit
   Circle(
-      {@required this.cx,
-      @required this.cy,
-      @required this.r,
+      {required this.cx,
+      required this.cy,
+      required this.r,
       this.id,
       this.fill,
       this.stroke,
