@@ -3,7 +3,7 @@ import 'package:scidart_plot/src/svg/enums/unit.dart';
 
 /// Round pixels values to 1 decimal point max.
 String roundPixels(double val, Unit? unit) {
-  return '${truncate(val, 1)}${unit?.xmlValue ?? Unit.px}';
+  return '${truncate(val, 1)}${(unit ?? Unit.px).xmlValue}';
 }
 
 /// Round only pixel number without include the unity.
